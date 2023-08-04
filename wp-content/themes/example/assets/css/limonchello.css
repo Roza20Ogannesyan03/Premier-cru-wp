@@ -1,0 +1,227 @@
+.container-small {
+  max-width: 1130px;
+}
+#limonchello {
+  margin-top: 90px;
+  border-radius: 16px;
+}
+
+.limonchello__slide {
+  max-width: 1660px !important;
+  position: relative;
+}
+
+.limonchello__swiper-button-next,
+.limonchello__swiper-button-prev {
+  width: 59px !important;
+  height: 59px !important;
+  border-radius: 50px;
+  border: 1px solid black;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.limonchello__swiper-button-prev {
+  z-index: 2;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translate(0, -50%);
+}
+
+.limonchello__swiper-button-next {
+  z-index: 2;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  transform: translate(0, -50%);
+}
+.slide__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.inner {
+  margin: 64px 0 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.inner__block1_links {
+  width: 199px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: 24px;
+  color: #000;
+}
+.inner__block1_about-limochello {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 334px;
+  height: 500px;
+}
+
+.about-limochello__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  height: 76px;
+}
+.about-limochello__item_title {
+  color: #23262f;
+}
+.about-limochello__item_text {
+  font-size: 14px;
+  line-height: 24px;
+}
+.inner__block2 {
+  max-width: 674px;
+}
+.inner__block2_text {
+  font-size: 18px;
+  line-height: 27px;
+  color: #000;
+}
+.inner__block2_chef {
+  min-height: 200px;
+  margin: 64px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chef-img {
+  width: 200px;
+  height: 200px;
+}
+
+.about-chef {
+  max-width: 352px;
+  height: 152px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-chef__lim {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  color: #777e90;
+}
+.about-chef__name {
+  font-size: 24px;
+  line-height: 32px;
+  color: #141416;
+}
+.about-chef__text {
+  line-height: 24px;
+}
+.inner__block2_events {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.events__item {
+  max-width: 674px;
+  height: 424px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.events__item-container {
+  width: 100%;
+  height: 360px;
+}
+.item__titles {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.inner__block2_text-748 {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .inner {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .inner__block1 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 748px) {
+  .limonchello__swiper-button-prev {
+    left: 30px;
+  }
+  .limonchello__swiper-button-next {
+    right: 30px;
+  }
+  .inner__block1 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .inner__block2_text {
+    font-size: 16px;
+  }
+  .inner__block2_chef {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .chef-img {
+    margin-right: 20px;
+  }
+  .inner__block2_text {
+    display: none;
+  }
+  .inner__block2_text-748 {
+    margin-top: 50px;
+    display: block;
+    font-size: 16px;
+    line-height: 27px;
+    color: #000;
+  }
+  .events__title {
+    line-height: 40px;
+    margin-right: 0;
+  }
+  .events__item-container {
+    height: 320px;
+  }
+<<<<<<< HEAD
+  .events__item {
+=======
+  .events__item{
+>>>>>>> 448ed0309d6fd48aae44ea93fb4337d2d4af840c
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .events__item-container {
+    height: 200px;
+  }
+  .limonchello__swiper-button-prev,
+<<<<<<< HEAD
+  .limonchello__swiper-button-next {
+=======
+  .limonchello__swiper-button-next  {
+>>>>>>> 448ed0309d6fd48aae44ea93fb4337d2d4af840c
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

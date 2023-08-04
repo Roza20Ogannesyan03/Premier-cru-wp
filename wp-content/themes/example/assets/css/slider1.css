@@ -1,0 +1,132 @@
+.slider__swiper-slide {
+  max-width: 1090px !important;
+  max-height: 568px;
+  border-radius: 16px;
+}
+
+.slider__swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.slider-swiper__text {
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+.descr {
+  display: flex;
+  flex-direction: column;
+  width: 1088px;
+  height: 96px;
+}
+.pagination-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 324px;
+  height: 64px;
+  gap: 60px;
+}
+
+.swiper-pagination {
+  width: 94px;
+  height: 24px;
+}
+
+.arrows {
+  display: flex;
+  width: 168px;
+  height: 64px;
+  gap: 50px;
+  left: 162px;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.slider__swiper-button-prev,
+.slider__swiper-button-next {
+  width: 59px !important;
+  height: 59px !important;
+  border-radius: 50px;
+  border: 1px solid black;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-pagination-fraction {
+  position: unset !important;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #777e90;
+}
+
+@media (max-width: 1440px) {
+  .slider-swiper__text {
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1200px) {
+  .weight-700 {
+    font-size: 36px;
+  }
+  .slider-swiper {
+    padding: 0 20px;
+  }
+  .slider-swiper__text {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider-swiper__text {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .weight-700 {
+    font-size: 46px;
+  }
+
+  .descr {
+    width: auto;
+  }
+
+  .pagination-container {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 748px) {
+  .descr {
+    height: auto;
+  }
+  .weight-700 {
+    line-height: 48px;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .arrows {
+    width: 130px;
+    gap: 20px;
+  }
+  .slider__swiper-button-next,
+  .slider__swiper-button-prev {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
