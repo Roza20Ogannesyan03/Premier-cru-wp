@@ -21,17 +21,25 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="logo"><?php the_custom_logo(); ?></div>
+            <div class="logo"><a href="http://premier-cru"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" /></a></div>
             <div class="menu-popup">
+                <?php
+                wp_nav_menu([
+                    'theme_location'  => 'top',
+                    'container'       => false,
+                    'menu_class' => 'navigation header__nav header__nav_popup',
+                    'add_li_class'  => 'navigation_link'
+                ]);
+                ?>
                 <button class="delivery-button delivery-button__popup">
                     Доставка
                 </button>
                 <div class="contacts contacts__popup">
                     <div class="contacts__number">
                         <div class="phone-icon">
-                            <img src="images/phone.svg" alt="" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.svg" alt="" />
                         </div>
-                        <div class="number">+7 (928) 864 22 22</div>
+                        <div class="number"><a class="number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a></div>
                     </div>
                     <div>
                         <p class="contacts__text">Служба качества</p>
@@ -42,7 +50,7 @@
             wp_nav_menu([
                 'theme_location'  => 'top',
                 'container'       => false,
-                'menu_class' => 'navigation',
+                'menu_class' => 'navigation header__nav',
                 'add_li_class'  => 'navigation_link'
             ]);
             ?>
@@ -51,9 +59,9 @@
             <div class="contacts">
                 <div class="contacts__number">
                     <div class="phone-icon">
-                        <img src="images/phone.svg" alt="" />
+                        <img src="<?php the_field('phone'); ?>" alt="" />
                     </div>
-                    <div class="number">+7 (928) 864 22 22</div>
+                    <div class="number"><a class="number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a></div>
                 </div>
                 <div>
                     <p class="contacts__text">Служба качества</p>

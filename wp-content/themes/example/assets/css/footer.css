@@ -86,6 +86,10 @@
   z-index: 5;
 }
 
+.footer .navigation a {
+  color: #fff;
+}
+
 @media (max-width: 1440px) {
   .footer__logo_subtitle {
     width: 180px;

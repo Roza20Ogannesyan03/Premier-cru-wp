@@ -87,7 +87,7 @@
 .inner__block2 {
   max-width: 674px;
 }
-.inner__block2_text {
+.inner__block2_text p {
   font-size: 18px;
   line-height: 27px;
   color: #000;
@@ -175,7 +175,7 @@
     flex-direction: column;
     gap: 50px;
   }
-  .inner__block2_text {
+  .inner__block2_text p {
     font-size: 16px;
   }
   .inner__block2_chef {
@@ -202,11 +202,8 @@
   .events__item-container {
     height: 320px;
   }
-<<<<<<< HEAD
+
   .events__item {
-=======
-  .events__item{
->>>>>>> 448ed0309d6fd48aae44ea93fb4337d2d4af840c
     height: auto;
   }
 }
@@ -216,11 +213,7 @@
     height: 200px;
   }
   .limonchello__swiper-button-prev,
-<<<<<<< HEAD
   .limonchello__swiper-button-next {
-=======
-  .limonchello__swiper-button-next  {
->>>>>>> 448ed0309d6fd48aae44ea93fb4337d2d4af840c
     width: 40px !important;
     height: 40px !important;
   }

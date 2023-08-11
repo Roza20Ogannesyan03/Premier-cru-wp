@@ -33,6 +33,10 @@
   list-style-type: none;
 }
 
+.header__nav_popup a {
+  color: white;
+}
+
 .delivery-button {
   width: 125px;
   height: 44px;
@@ -240,7 +244,4 @@
   body.noscroll {
     overflow: hidden;
   }
-}
-
-@media (max-width: 748px) {
 }
