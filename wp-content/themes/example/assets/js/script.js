@@ -5,10 +5,10 @@ const swiper = new Swiper(document.getElementById("rubl"), {
     nextEl: ".slider__swiper-button-next",
     prevEl: ".slider__swiper-button-prev",
   },
-  centeredSlides: true,
+  centeredSlides: false,
   slidesPerView: "auto",
   loop: true,
-  spaceBetween: 60,
+  spaceBetween: 30,
   /*on: {
     slideChange: function (swiper) {
       console.log(swiper);

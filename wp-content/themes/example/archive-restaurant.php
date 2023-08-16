@@ -19,9 +19,8 @@ get_header(); ?>
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
+
             ?>
-
-
 
                     <div class="all-events__item">
                         <a href="<?php the_permalink(); ?>">
@@ -52,6 +51,7 @@ get_header(); ?>
 
         </div>
     </div>
+    <?php wp_pagenavi(); ?>
     <div class="app">
         <div class="container">
             <div class="app__wrapper">

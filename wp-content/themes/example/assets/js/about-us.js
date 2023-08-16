@@ -9,10 +9,3 @@ const swiper1 = new Swiper(document.getElementById("kupol"), {
   loop: true,
   spaceBetween: 44,
 });
-
-const activeSlide = document.querySelectorAll(".about-us__slide");
-activeSlide.forEach((slide) => {
-  slide.addEventListener("click", function () {
-    slide.classList.toggle("active");
-  });
-});
