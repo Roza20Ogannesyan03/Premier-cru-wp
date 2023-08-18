@@ -101,7 +101,42 @@ button {
 .breadcrumb __item_active {
   color: #000;
 }
-
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  margin: 30px 0;
+}
+.paginationitem {
+  margin-right: 8px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33px;
+  flex: 0 0 33px;
+  width: 33px;
+  height: 33px;
+}
+.paginationitem_active span {
+  font-weight: 700;
+}
+.pagi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 100px;
+}
+.more {
+  width: 200px;
+}
+.pages {
+  display: none !important;
+}
+.pagination__page-item {
+  margin-right: 8px;
+}
 @media (max-width: 1200px) {
   .container-large {
     padding: 0 15px;

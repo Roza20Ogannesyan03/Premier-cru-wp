@@ -62,6 +62,11 @@
   line-height: 24px;
   color: #000;
 }
+.inner__block1 {
+  position: sticky;
+  height: 640px;
+  top: 40px;
+}
 .inner__block1_about-limochello {
   display: flex;
   flex-direction: column;

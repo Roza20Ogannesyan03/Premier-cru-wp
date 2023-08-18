@@ -77,7 +77,6 @@ function add_scripts_and_styles()
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', array(), null, 'footer');
 }
 
-
 function add_menu()
 {
     register_nav_menu('top', 'Меню в шапке сайта');
@@ -94,4 +93,138 @@ if (function_exists('acf_add_options_page')) {
         'capability'     => 'edit_posts',
         'redirect'     => false
     ));
+}
+
+add_filter('wp_pagenavi', 'abeta_pagination', 10, 2);
+function abeta_pagination($html)
+{
+    $out = '';
+    $out = str_replace('<div', '', $html);
+
+    $out = str_replace('class=\'wp-pagenavi\' role=\'navigation\'>', '', $out);
+    $out = str_replace('<a', '<a class="pagination__page-item"', $out);
+    $out = str_replace('</a>', '</a>', $out);
+    $out = str_replace('<span aria-current=\'page\' class=\'current\'>', '<span class="pagination__page-item active">', $out);
+    $out = str_replace('</div>', '', $out);
+    // $out = str_replace('http://abeta.abetadev.beget.tech/projects/page/','http://abeta.abetadev.beget.tech/projects/',$out);
+    // $out = preg_replace('/\?paged=(\d)/m', '${1}/', $out);
+    $out = str_replace('?paged=', '', $out);
+    return '<div class="pagination__page">' . $out . '</div>';
+}
+
+add_action('wp_ajax_loadmore_news', 'loadmore_news_action');
+add_action('wp_ajax_nopriv_loadmore_news', 'loadmore_news_action');
+function loadmore_news_action()
+{
+
+    global $post;
+
+    $args = [
+        'post_type' => 'restaurant',
+        'post_status' => 'publish',
+        'posts_per_page' => 6,
+        'paged' => $_POST['page'] + 1,
+    ];
+
+    $post_query = new WP_Query($args);
+
+?>
+    <div class="row">
+        <?php
+        if ($post_query->have_posts()) {
+            while ($post_query->have_posts()) {
+                $post_query->the_post();
+                $post_query->post;
+        ?>
+                <div class="all-events__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="item__img-container">
+
+                            <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
+
+                            <div class="slide__sign">
+                                <img class="slide__sign_img" src="<?php the_field('sign_img'); ?>" alt="" />
+                            </div>
+
+
+                        </div>
+
+                        <a class="item__titles"><?php the_title(); ?></a>
+
+                        <h5 class="item__subtitle"><?php the_excerpt(); ?></h5>
+                    </a>
+                </div>
+
+
+        <?php
+
+            }
+        }
+        ?>
+    </div>
+
+<?php
+    wp_die();
+}
+if ($_SERVER['REQUEST_URI'] == '/restaurant/page/') {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: /event/");
+    exit();
+}
+
+
+add_action('wp_ajax_loadmore_events', 'loadmore_events_action');
+add_action('wp_ajax_nopriv_loadmore_news', 'loadmore_events_action');
+function loadmore_events_action()
+{
+
+    global $post;
+
+    $args = [
+        'post_type' => 'event',
+        'post_status' => 'publish',
+        'posts_per_page' => 6,
+        'paged' => $_POST['page'] + 1,
+    ];
+
+    $post_query = new WP_Query($args);
+
+?>
+    <div class="row">
+        <?php
+        if ($post_query->have_posts()) {
+            while ($post_query->have_posts()) {
+                $post_query->the_post();
+                $post_query->post;
+        ?>
+                <div class="all-events__item ww">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="item__img-container">
+
+                            <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
+
+
+                        </div>
+
+                        <a class="item__titles"><?php the_title(); ?></a>
+
+                        <h5 class="item__subtitle"><?php the_excerpt(); ?></h5>
+                    </a>
+                </div>
+
+
+        <?php
+
+            }
+        }
+        ?>
+    </div>
+
+<?php
+    wp_die();
+}
+if ($_SERVER['REQUEST_URI'] == '/event/page/') {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: /event/");
+    exit();
 }
