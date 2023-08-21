@@ -58,6 +58,7 @@ button {
 .container {
   max-width: 1378px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .container-small {
@@ -118,12 +119,10 @@ button {
   width: 33px;
   height: 33px;
 }
-.paginationitem_active span {
-  font-weight: 700;
-}
+
 .pagi {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   height: 30px;
   margin-bottom: 100px;
@@ -136,6 +135,26 @@ button {
 }
 .pagination__page-item {
   margin-right: 8px;
+  font-weight: 700;
+}
+.pagination__page-item:hover {
+  color: #a4a4a4;
+}
+.pagination__page .active {
+  text-decoration: underline;
+}
+
+.more__btn {
+  font-weight: 700;
+}
+.more__btn:hover {
+  color: #a4a4a4;
+}
+
+.privacy {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 100px;
 }
 @media (max-width: 1200px) {
   .container-large {

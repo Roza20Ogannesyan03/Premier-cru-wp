@@ -1,6 +1,8 @@
 <?php
 get_header(); ?>
-
+<div class="background-img">
+    <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
+</div>
 <main>
     <div class="container">
         <ul class="breadcrumb">
@@ -20,14 +22,16 @@ get_header(); ?>
                 <!-- Slides -->
                 <?php
                 $slides = get_field('slider_rest');
-                foreach ($slides as $slide) {
+                if ($slides !== null) {
+                    foreach ($slides as $slide) {
                 ?>
 
-                    <div class="limonchello__slide swiper-slide">
-                        <img class="slide__img" src="<?= $slide['slider_rest-img']; ?>" alt="" />
-                    </div>
+                        <div class="limonchello__slide swiper-slide">
+                            <img class="slide__img" src="<?= $slide['slider_rest-img']; ?>" alt="" />
+                        </div>
 
                 <?php
+                    }
                 }
                 ?>
 
@@ -148,18 +152,18 @@ get_header(); ?>
         <div class="container">
             <div class="app__wrapper">
                 <div class="app__text">
-                    <div class="app__title">Скачивайте приложение Premier CRU</div>
-                    <div class="app__subtitle">
+                    <div class="app__title wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">Скачивайте приложение Premier CRU</div>
+                    <div class="app__subtitle wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".2s">
                         Получите скидку до 25% по программе лояльности, только в
                         мобильном приложении Premier CRU!
                     </div>
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
                         <a href="<?php the_field('link_appstore', 'option'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
                         </a>
                     </button>
 
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
                         <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
                         </a>

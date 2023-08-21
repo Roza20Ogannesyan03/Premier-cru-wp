@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <div class="background-img">
-    <img style="width: 100%" src="<?php the_field('background-img'); ?>" alt="" />
+    <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
 </div>
 <main>
     <div class="container">
@@ -29,17 +29,19 @@ get_header();
         if ($post_query->have_posts()) {
         ?>
             <div class="restaraunts">
-                <div class="news__row" id="newsResponse">
+                <div class="events__row" id="eventResponse">
                     <?php
                     while ($post_query->have_posts()) {
                         $post_query->the_post();
                         $post_query->post;
                     ?>
 
-                        <div class="all-events__item ww">
+                        <div class="all-events__item">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="item__img-container">
-
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
+                                    </a>
                                     <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
 
 
@@ -80,18 +82,18 @@ get_header();
         <div class="container">
             <div class="app__wrapper">
                 <div class="app__text">
-                    <div class="app__title">Скачивайте приложение Premier CRU</div>
-                    <div class="app__subtitle">
+                    <div class="app__title wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">Скачивайте приложение Premier CRU</div>
+                    <div class="app__subtitle wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".2s">
                         Получите скидку до 25% по программе лояльности, только в
                         мобильном приложении Premier CRU!
                     </div>
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
                         <a href="<?php the_field('link_appstore', 'option'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
                         </a>
                     </button>
 
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
                         <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
                         </a>
@@ -104,37 +106,37 @@ get_header();
     </div>
 </main>
 <script>
-    var loadmoreNews = document.querySelector(".loadmoreevents");
-    console.log(loadmoreNews);
+    var loadmoreEvents = document.querySelector(".loadmoreevents");
+    console.log(loadmoreEvents);
     var currentPage = <?php echo $paged; ?>;
     var act = "/wp-admin/admin-ajax.php";
-    var pageNext = loadmoreNews.getAttribute("data-page");
-    var pages = loadmoreNews.getAttribute("data-pages");
+    var pageNext = loadmoreEvents.getAttribute("data-page");
+    var pages = loadmoreEvents.getAttribute("data-pages");
     if (pageNext < pages) {
         pageNext++;
     }
     window.addEventListener("DOMContentLoaded", () => {
         if (currentPage == pageNext) {
-            loadmoreNews.remove();
+            loadmoreEvents.remove();
         }
     });
-    loadmoreNews.addEventListener('click', (e) => {
+    loadmoreEvents.addEventListener('click', (e) => {
         e.preventDefault();
         //console.log(e.target);
         //return;
-        var link = loadmoreNews.getAttribute('data-link') + "page/" + pageNext + "/";
-        console.log(loadmoreNews.getAttribute('data-link'));
-        console.log(link);
+        var link = loadmoreEvents.getAttribute('data-link') + "page/" + pageNext + "/";
+        console.log(loadmoreEvents.getAttribute('data-link'));
         window.history.pushState("", "Title", link);
-        loadmoreNews.classList.add("disabled");
+        loadmoreEvents.classList.add("disabled");
         const xhr = new XMLHttpRequest();
         const data = new FormData();
         data.append("action", "loadmore_events");
         data.append("page", currentPage);
+        console.log(currentPage);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                    loadmoreNews.classList.remove("disabled");
+                    loadmoreEvents.classList.remove("disabled");
                     let response = xhr.responseText;
                     let divResponse = document.createElement("div");
                     divResponse.innerHTML = xhr.responseText;
@@ -142,15 +144,16 @@ get_header();
                     // return;
                     let paginationResponse = divResponse.querySelector('.pagination__page');
                     let itemsResponse = divResponse.querySelectorAll('.all-events__item');
-                    let parent = document.querySelector("#newsResponse");
+                    let parent = document.querySelector("#eventResponse");
                     let pagination = document.querySelector('.pagination__page');
                     if (response) {
                         itemsResponse.forEach((el) => {
                             parent.append(el);
                         });
                     }
+                    pagination.replaceWith(paginationResponse);
                     if (pageNext == pages) {
-                        loadmoreNews.remove();
+                        loadmoreEvents.remove();
                         console.log(pageNext);
                     } else {
                         pageNext++;

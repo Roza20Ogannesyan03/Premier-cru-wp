@@ -106,15 +106,13 @@ function abeta_pagination($html)
     $out = str_replace('</a>', '</a>', $out);
     $out = str_replace('<span aria-current=\'page\' class=\'current\'>', '<span class="pagination__page-item active">', $out);
     $out = str_replace('</div>', '', $out);
-    // $out = str_replace('http://abeta.abetadev.beget.tech/projects/page/','http://abeta.abetadev.beget.tech/projects/',$out);
-    // $out = preg_replace('/\?paged=(\d)/m', '${1}/', $out);
     $out = str_replace('?paged=', '', $out);
     return '<div class="pagination__page">' . $out . '</div>';
 }
 
-add_action('wp_ajax_loadmore_news', 'loadmore_news_action');
-add_action('wp_ajax_nopriv_loadmore_news', 'loadmore_news_action');
-function loadmore_news_action()
+add_action('wp_ajax_loadmore_restaurants', 'loadmore_restaurants_action');
+add_action('wp_ajax_nopriv_loadmore_restaurants', 'loadmore_restaurants_action');
+function loadmore_restaurants_action()
 {
 
     global $post;
@@ -162,19 +160,31 @@ function loadmore_news_action()
         }
         ?>
     </div>
+    <?php $max_pages = $post_query->max_num_pages;
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    $link = html_entity_decode(get_pagenum_link()); ?>
+    <div class="pagi">
+        <div class="more">
+            <a href="#" class="more__btn loadmorerestaurants" data-pages="<?php echo $max_pages; ?>" data-page="<?php echo $paged; ?>" data-link="<?php echo $link; ?>">Показать ещё</a>
+        </div>
+        <?php $_SERVER['REQUEST_URI'] = 'restaurant/'; ?>
+        <?php if (function_exists('wp_pagenavi')) {
+            wp_pagenavi(array('query' => $post_query));
+        } ?>
+    </div>
 
 <?php
     wp_die();
 }
-if ($_SERVER['REQUEST_URI'] == '/restaurant/page/') {
+if ($_SERVER['REQUEST_URI'] == '/restaurant') {
     header("HTTP/1.1 301 Moved Permanently");
-    header("Location: /event/");
+    header("Location: /restaurant/");
     exit();
 }
 
 
 add_action('wp_ajax_loadmore_events', 'loadmore_events_action');
-add_action('wp_ajax_nopriv_loadmore_news', 'loadmore_events_action');
+add_action('wp_ajax_nopriv_loadmore_events', 'loadmore_events_action');
 function loadmore_events_action()
 {
 
@@ -219,7 +229,18 @@ function loadmore_events_action()
         }
         ?>
     </div>
-
+    <?php $max_pages = $post_query->max_num_pages;
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    $link = html_entity_decode(get_pagenum_link()); ?>
+    <div class="pagi">
+        <div class="more">
+            <a href="#" class="more__btn loadmoreevents" data-pages="<?php echo $max_pages; ?>" data-page="<?php echo $paged; ?>" data-link="<?php echo $link; ?>">Показать ещё</a>
+        </div>
+        <?php $_SERVER['REQUEST_URI'] = 'event/'; ?>
+        <?php if (function_exists('wp_pagenavi')) {
+            wp_pagenavi(array('query' => $post_query));
+        } ?>
+    </div>
 <?php
     wp_die();
 }

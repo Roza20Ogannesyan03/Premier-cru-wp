@@ -12,7 +12,7 @@ get_header(); ?>
 
     </div>
     <div class="background-img">
-        <img style="width: 100%" src="<?php the_field('background-img'); ?>" alt="" />
+        <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
     </div>
     <div class="container-small">
         <h1 class="title">Дарим Скидку -20% в день рождения!</h1>
@@ -22,7 +22,8 @@ get_header(); ?>
         <div class="discount-text">
             <?php the_content(); ?>
         </div>
-
+    </div>
+    <div class="container-small">
         <div class="events">
             <div class="events__header">
                 <h2 class="events__title">другие события</h2>
@@ -30,7 +31,7 @@ get_header(); ?>
                 <a class="events__button" href="http://premier-cru/event">
 
                     <p class="button__text">Все события</p>
-                    <div class="img-container">
+                    <div class="button__img-container">
                         <img class="button__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt="" />
                     </div>
                 </a>
@@ -42,44 +43,55 @@ get_header(); ?>
                     'post_type' => 'event',
                     'posts_per_page'    => 6
                 );
+                $delay = 0;
                 $query = new WP_Query($args);
                 if (($query->have_posts())) {
                     while ($query->have_posts()) {
                         $query->the_post();
                 ?>
-                        <div class="all-events__item randomly">
+                        <div class="all-events__item randomly wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
                             <div class="item__img-container">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
+                                </a>
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
+                                </a>
                                 <a href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
                                 </a>
                             </div>
                             <h4> <a class=" item__titles" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                             <h5><a class="item__subtitle" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></h5>
+
                         </div>
                 <?php
+                        $delay += 0.1;
                     }
                 }
+                wp_reset_postdata();
                 ?>
+
             </div>
         </div>
-    </div>
 
+    </div>
     <div class="app">
         <div class="container">
             <div class="app__wrapper">
                 <div class="app__text">
-                    <div class="app__title">Скачивайте приложение Premier CRU</div>
-                    <div class="app__subtitle">
+                    <div class="app__title wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">Скачивайте приложение Premier CRU</div>
+                    <div class="app__subtitle wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".2s">
                         Получите скидку до 25% по программе лояльности, только в
                         мобильном приложении Premier CRU!
                     </div>
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
                         <a href="<?php the_field('link_appstore', 'option'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
                         </a>
                     </button>
 
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
                         <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
                         </a>

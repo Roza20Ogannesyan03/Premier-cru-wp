@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div class="background-img">
-    <img style="width: 100%" src="<?php the_field('background-img'); ?>" alt="" />
+    <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
 </div>
 <main>
     <div class="container">
@@ -26,7 +26,7 @@ get_header(); ?>
         if ($post_query->have_posts()) {
         ?>
             <div class="restaraunts">
-                <div class="news__row" id="newsResponse">
+                <div class="restaurants__row" id="restaurantsResponse">
                     <?php
                     while ($post_query->have_posts()) {
                         $post_query->the_post();
@@ -77,18 +77,18 @@ get_header(); ?>
         <div class="container">
             <div class="app__wrapper">
                 <div class="app__text">
-                    <div class="app__title">Скачивайте приложение Premier CRU</div>
-                    <div class="app__subtitle">
+                    <div class="app__title wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">Скачивайте приложение Premier CRU</div>
+                    <div class="app__subtitle wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".2s">
                         Получите скидку до 25% по программе лояльности, только в
                         мобильном приложении Premier CRU!
                     </div>
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
                         <a href="<?php the_field('link_appstore', 'option'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
                         </a>
                     </button>
 
-                    <button class="download">
+                    <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
                         <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
                         </a>
@@ -100,55 +100,53 @@ get_header(); ?>
         </div>
     </div>
 </main>
+
+
 <script>
-    var loadmoreNews = document.querySelector(".loadmorerestaurants");
-    console.log(loadmoreNews);
+    var loadmoreRestaurants = document.querySelector(".loadmorerestaurants");
     var currentPage = <?php echo $paged; ?>;
     var act = "/wp-admin/admin-ajax.php";
-    var pageNext = loadmoreNews.getAttribute("data-page");
-    var pages = loadmoreNews.getAttribute("data-pages");
+    var pageNext = loadmoreRestaurants.getAttribute("data-page");
+    var pages = loadmoreRestaurants.getAttribute("data-pages");
     if (pageNext < pages) {
         pageNext++;
     }
     window.addEventListener("DOMContentLoaded", () => {
         if (currentPage == pageNext) {
-            loadmoreNews.remove();
+            loadmoreRestaurants.remove();
         }
     });
-    loadmoreNews.addEventListener('click', (e) => {
+    loadmoreRestaurants.addEventListener('click', (e) => {
         e.preventDefault();
-        //console.log(e.target);
-        //return;
-        var link = loadmoreNews.getAttribute('data-link') + "page/" + pageNext + "/";
-        console.log(loadmoreNews.getAttribute('data-link'));
-        console.log(link);
+        var link = loadmoreRestaurants.getAttribute('data-link') + "page/" + pageNext + "/";
         window.history.pushState("", "Title", link);
-        loadmoreNews.classList.add("disabled");
+        loadmoreRestaurants.classList.add("disabled");
         const xhr = new XMLHttpRequest();
         const data = new FormData();
-        data.append("action", "loadmore_news");
+        data.append("action", "loadmore_restaurants");
         data.append("page", currentPage);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                    loadmoreNews.classList.remove("disabled");
+                    loadmoreRestaurants.classList.remove("disabled");
                     let response = xhr.responseText;
                     let divResponse = document.createElement("div");
                     divResponse.innerHTML = xhr.responseText;
-                    // console.log(divResponse);
-                    // return;
+                    console.log(divResponse);
+
                     let paginationResponse = divResponse.querySelector('.pagination__page');
                     let itemsResponse = divResponse.querySelectorAll('.all-events__item');
-                    let parent = document.querySelector("#newsResponse");
+                    let parent = document.querySelector("#restaurantsResponse");
                     let pagination = document.querySelector('.pagination__page');
+                    console.log(paginationResponse);
                     if (response) {
                         itemsResponse.forEach((el) => {
                             parent.append(el);
                         });
+                        pagination.replaceWith(paginationResponse);
                     }
                     if (pageNext == pages) {
-                        loadmoreNews.remove();
-                        console.log(pageNext);
+                        loadmoreRestaurants.remove();
                     } else {
                         pageNext++;
                     }
@@ -167,4 +165,7 @@ get_header(); ?>
         xhr.send(data);
     });
 </script>
+
+
+
 <?php get_footer(); ?>

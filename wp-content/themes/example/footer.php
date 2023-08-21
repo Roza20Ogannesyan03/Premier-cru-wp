@@ -36,8 +36,12 @@
         <p class="white block2__font-1024">
           Процедура заказа в мобильном приложении
         </p>
-        <p class="white block2__font-1024">Политика конфиденциальности</p>
-        <p class="white block2__font-1024">Разработка сайта - ABETA</p>
+        <a href=" http://premier-cru/politika">
+          <p class="white block2__font-1024">Политика конфиденциальности</p>
+        </a>
+        <a href="https://abeta.ru/">
+          <p class="white block2__font-1024">Разработка сайта - ABETA</p>
+        </a>
       </div>
       <div class="footer__contacts-1024">
         <div class="footer__number"><a class="footer__number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">Служба качества <?php the_field('number', 'option'); ?></a></div>

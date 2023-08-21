@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<div class="background-img">
+  <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
+</div>
 <!-- Ошибка 404 -->
 <div class="page404">
   <div class="container">

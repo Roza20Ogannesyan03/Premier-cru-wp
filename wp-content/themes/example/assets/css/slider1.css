@@ -162,3 +162,9 @@
     width: 240px;
   }
 }
+
+@media (max-width: 480px) {
+  .pagination-container {
+    gap: 0;
+  }
+}

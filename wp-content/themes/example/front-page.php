@@ -3,7 +3,7 @@ get_header(); ?>
 <main>
 
   <div class="background-img">
-    <img style="width: 100%" src="<?php the_field('background-img') ?>" alt="" />
+    <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
   </div>
   <div class="container">
     <div class="about-us">
@@ -40,9 +40,11 @@ get_header(); ?>
           }
       ?>
           <a class="swiper-slide about-us__slide" href="<?php the_permalink(); ?>">
-            <div class="about-us__slide_img" style="background-image: url('<?php echo $thumbnail_url ?>')" <?php post_class('about-us__slide_img'); ?>>
-              <img class="slide__img" src="" alt="" />
-            </div>
+            <?php if ($thumbnail_url) : ?>
+              <div class="about-us__slide_img" style="background-image: url('<?php echo $thumbnail_url ?>')" <?php post_class('about-us__slide_img'); ?>>
+                <img class="slide__img" src="" alt="" />
+              </div>
+            <?php endif; ?>
             <div class="slide__sign">
               <img class="slide__sign_img" src="<?= get_field('sign_img'); ?>" alt="" />
             </div>
@@ -78,8 +80,6 @@ get_header(); ?>
             <h2 class="sale weight-700">Акции</h2>
             <div class="pagination-container">
               <div class="swiper-pagination"></div>
-
-
 
               <div class="arrows">
                 <!-- If we need navigation buttons -->

@@ -59,7 +59,7 @@
             <div class="contacts">
                 <div class="contacts__number">
                     <div class="phone-icon">
-                        <img src="<?php the_field('phone'); ?>" alt="" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.svg" alt="" />
                     </div>
                     <div class="number"><a class="number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a></div>
                 </div>

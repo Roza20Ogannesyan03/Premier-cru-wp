@@ -151,13 +151,6 @@
   .column2 {
     margin-top: 60px;
   }
-  .randomly {
-    max-height: 361px;
-  }
-  .randomly:nth-child(even),
-  .randomly:nth-child(odd) {
-    margin: 0;
-  }
 }
 
 @media (max-width: 748px) {

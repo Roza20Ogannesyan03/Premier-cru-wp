@@ -43,12 +43,38 @@
   height: auto;
   max-width: 910px;
 }
+.events {
+  margin-bottom: 200px;
+}
+.events__line {
+  width: 40%;
+}
 .events__button {
   width: 154px;
+}
+
+.randomly {
+  max-width: 515px;
+  max-height: 195px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.randomly:nth-child(even) {
+  margin-top: 152px;
 }
 @media (max-width: 1200px) {
   .container-small {
     padding: 0 20px;
+  }
+  .randomly {
+    max-height: 361px;
+    max-width: 533px;
+  }
+  .randomly:nth-child(even),
+  .randomly:nth-child(odd) {
+    margin: 0;
   }
 }
 @media (max-width: 1024px) {
@@ -62,6 +88,9 @@
 
   .column2 {
     margin-top: 60px;
+  }
+  .events {
+    margin-bottom: 100px;
   }
 }
 
