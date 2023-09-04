@@ -16,8 +16,15 @@ get_header(); ?>
     </div>
     <div class="container-small">
         <h1 class="title">Дарим Скидку -20% в день рождения!</h1>
-        <div class="oo">
-            <img src="<?php the_field('discount_img') ?>" alt="" class="discount-img" />
+        <div class="discount-img-container">
+            <?php
+            $img = get_field('discount_img');
+            if ($img) {
+            ?>
+                <img src="<?= $img ?>" alt="" class="discount-img" />
+            <?php
+            }
+            ?>
         </div>
         <div class="discount-text">
             <?php the_content(); ?>
@@ -51,9 +58,6 @@ get_header(); ?>
                 ?>
                         <div class="all-events__item randomly wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
                             <div class="item__img-container">
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
-                                </a>
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
                                 </a>

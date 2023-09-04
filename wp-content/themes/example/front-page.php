@@ -94,7 +94,7 @@ get_header(); ?>
           </div>
         </div>
 
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" id="lightgallery">
 
 
           <?php
@@ -104,9 +104,9 @@ get_header(); ?>
           foreach ($qwe as $row) {
           ?>
 
-            <div class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+            <a href="<?= $row['slide_imgg']; ?>" data-lg-size="1600-2400" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <img src="<?= $row['slide_imgg']; ?>" alt="" />
-            </div>
+            </a>
 
           <?php
             $delay += 0.2;
@@ -217,4 +217,12 @@ get_header(); ?>
     }
 
   }
+</script>
+<script type="text/javascript">
+  lightGallery(document.getElementById('lightgallery'), {
+    plugins: [lgZoom, lgThumbnail],
+    licenseKey: 'your_license_key',
+    speed: 500,
+    // ... other settings
+  });
 </script>

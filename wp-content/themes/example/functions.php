@@ -26,7 +26,13 @@ function add_scripts_and_styles()
 {
 
     wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), null, 'footer');
-    wp_enqueue_script('swiper-css', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
+    wp_enqueue_script('lightgallery', get_template_directory_uri() . '/assets/js/lightgallery.umd.js', array(), null, 'footer');
+    wp_enqueue_script('lgthumbnail', get_template_directory_uri() . '/assets/js/lg-thumbnail.umd.js', array(), null, 'footer');
+    wp_enqueue_script('lgzoom', get_template_directory_uri() . '/assets/js/lg-zoom.umd.js', array(), null, 'footer');
+
+    wp_enqueue_style('lightgallerycss', get_template_directory_uri() . '/assets/css/lightgallery.css');
+    wp_enqueue_style('lgzoomcss', get_template_directory_uri() . '/assets/css/lg-zoom.css');
+    wp_enqueue_style('lgthumbnailcss', get_template_directory_uri() . '/assets/css/lg-thumbnail.css');
 
     wp_enqueue_style('style',  get_stylesheet_uri());
     wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css');
@@ -93,6 +99,50 @@ if (function_exists('acf_add_options_page')) {
         'capability'     => 'edit_posts',
         'redirect'     => false
     ));
+}
+
+class main_service_mobile_menu_Walker extends Walker_Nav_Menu
+{
+    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+    {
+
+        if ($depth == 0) {
+            if ($args->has_children && $item->current) {
+                $output .= '<li class="menu__item active"><a href="' . $item->url . '" class="menu__link">' . $item->title . '</a><span class="menu__item-svg-block" onclick="openMenu(this);"><svg class="menu__item-svg"><use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#arrowMenu"></use></svg></span>';
+            } else if ($args->has_children) {
+                $output .= '<li class="menu__item"><a href="' . $item->url . '" class="menu__link">' . $item->title . '</a><span class="menu__item-svg-block" onclick="openMenu(this);"><svg class="menu__item-svg"><use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#arrowMenu"></use></svg></span>';
+            } else if ($item->current) {
+                $output .= '<li class="menu__item active"><a href="' . $item->url . '" class="menu__link">' . $item->title . '</a>';
+            } else {
+                $output .= '<li class="menu__item"><a href="' . $item->url . '" class="menu__link">' . $item->title . '</a>';
+            }
+        }
+        if ($depth == 1) {
+            if ($item->current) {
+                $output .= '<li class="menu__sub-item"><a href="' . $item->url . '" class="menu__sub-link menu__sub-link_active">' . $item->title . '</a>';
+            } else {
+                $output .= '<li class="menu__sub-item"><a href="' . $item->url . '" class="menu__sub-link">' . $item->title . '</a>';
+            }
+        }
+    }
+    function start_lvl(&$output, $depth = 0, $args = array())
+    {
+        $output .= '<ul class="menu__sub">';
+    }
+
+    function end_lvl(&$output, $depth = 0, $args = array())
+    {
+        $output .= '</ul>';
+    }
+    function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output)
+    {
+
+        $id_field = $this->db_fields['id'];
+        if (is_object($args[0])) {
+            $args[0]->has_children = !empty($children_elements[$element->$id_field]);
+        }
+        return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+    }
 }
 
 add_filter('wp_pagenavi', 'abeta_pagination', 10, 2);

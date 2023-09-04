@@ -10,12 +10,9 @@ function hambHandler(e) {
   popup.classList.toggle("open");
   hamb.classList.toggle("active");
   if (hamb.classList.contains("active")) {
-    console.log("11111");
     bar.forEach((item) => (item.style.background = "white"));
-    menuBurger.style.border = "1px solid white";
   } else {
     bar.forEach((item) => (item.style.background = "#23262f"));
-    menuBurger.style.border = "1px solid #23262f";
   }
 
   body.classList.toggle("noscroll");
@@ -28,15 +25,36 @@ function renderPopup() {
 
 // Код для закрытия меню при нажатии на ссылку
 
-const links = Array.from(menu.children);
+// const links = Array.from(menu.children);
 
-links.forEach((link) => {
-  link.addEventListener("click", closeOnClick);
-});
+// links.forEach((link) => {
+//   link.addEventListener("click", closeOnClick);
+// });
 
-function closeOnClick() {
-  popup.classList.remove("open");
-  hamb.classList.remove("active");
+// function closeOnClick() {
+//   popup.classList.remove("open");
+//   hamb.classList.remove("active");
 
-  body.classList.remove("noscroll");
+//   body.classList.remove("noscroll");
+// }
+const menuItem = document.querySelector(
+  ".header__nav_popup .menu__item:nth-child(3)"
+);
+const menuarr = document.querySelector(".menu__sub");
+function openMenu(e) {
+  console.log(e);
+
+  if (e.parentElement.classList.contains("open")) {
+    e.nextElementSibling.style.maxHeight = "0";
+    e.parentElement.classList.remove("open");
+    menuItem.style.height = "40px";
+    menuarr.style.display = "none";
+  } else {
+    e.nextElementSibling.style.maxHeight =
+      e.nextElementSibling.scrollHeight + "px";
+    console.log(e.nextElementSibling.scrollHeight);
+    menuItem.style.height = "200px";
+    menuarr.style.display = "flex";
+    e.parentElement.classList.add("open");
+  }
 }

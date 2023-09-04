@@ -16,10 +16,9 @@ get_header(); ?>
 
 
         <?php
-        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = [
             'post_type' => 'restaurant',
-            'posts_per_page' => 6,
+            'posts_per_page' => -1,
             'paged' => $paged,
         ];
         $post_query = new WP_Query($args);
@@ -58,18 +57,8 @@ get_header(); ?>
                 </div>
             </div>
         <?php } ?>
-        <?php $max_pages = $post_query->max_num_pages;
-        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-        $link = html_entity_decode(get_pagenum_link()); ?>
-        <div class="pagi">
-            <div class="more">
-                <a href="#" class="more__btn loadmorerestaurants" data-pages="<?php echo $max_pages; ?>" data-page="<?php echo $paged; ?>" data-link="<?php echo $link; ?>">Показать ещё</a>
-            </div>
-            <?php $_SERVER['REQUEST_URI'] = 'restaurant/'; ?>
-            <?php if (function_exists('wp_pagenavi')) {
-                wp_pagenavi(array('query' => $post_query));
-            } ?>
-        </div>
+
+    </div>
 
     </div>
 
@@ -101,70 +90,6 @@ get_header(); ?>
     </div>
 </main>
 
-
-<script>
-    var loadmoreRestaurants = document.querySelector(".loadmorerestaurants");
-    var currentPage = <?php echo $paged; ?>;
-    var act = "/wp-admin/admin-ajax.php";
-    var pageNext = loadmoreRestaurants.getAttribute("data-page");
-    var pages = loadmoreRestaurants.getAttribute("data-pages");
-    if (pageNext < pages) {
-        pageNext++;
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-        if (currentPage == pageNext) {
-            loadmoreRestaurants.remove();
-        }
-    });
-    loadmoreRestaurants.addEventListener('click', (e) => {
-        e.preventDefault();
-        var link = loadmoreRestaurants.getAttribute('data-link') + "page/" + pageNext + "/";
-        window.history.pushState("", "Title", link);
-        loadmoreRestaurants.classList.add("disabled");
-        const xhr = new XMLHttpRequest();
-        const data = new FormData();
-        data.append("action", "loadmore_restaurants");
-        data.append("page", currentPage);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    loadmoreRestaurants.classList.remove("disabled");
-                    let response = xhr.responseText;
-                    let divResponse = document.createElement("div");
-                    divResponse.innerHTML = xhr.responseText;
-                    console.log(divResponse);
-
-                    let paginationResponse = divResponse.querySelector('.pagination__page');
-                    let itemsResponse = divResponse.querySelectorAll('.all-events__item');
-                    let parent = document.querySelector("#restaurantsResponse");
-                    let pagination = document.querySelector('.pagination__page');
-                    console.log(paginationResponse);
-                    if (response) {
-                        itemsResponse.forEach((el) => {
-                            parent.append(el);
-                        });
-                        pagination.replaceWith(paginationResponse);
-                    }
-                    if (pageNext == pages) {
-                        loadmoreRestaurants.remove();
-                    } else {
-                        pageNext++;
-                    }
-                    currentPage++;
-                } else {
-                    console.log(
-                        "An error occurred during your request: " +
-                        xhr.status +
-                        " " +
-                        xhr.statusText
-                    );
-                }
-            }
-        };
-        xhr.open("POST", act);
-        xhr.send(data);
-    });
-</script>
 
 
 

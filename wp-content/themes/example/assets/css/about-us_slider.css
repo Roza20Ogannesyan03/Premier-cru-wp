@@ -19,6 +19,7 @@
   max-height: 690px;
   position: relative;
   z-index: 2;
+  transition: background-color 0.5s;
 }
 .about-us__slide_img::after,
 .slide__sign::after {
@@ -42,7 +43,7 @@
   top: 0;
   left: 0;
   background-color: rgba(165, 192, 191, 0.3);
-  transition: opacity 0.35s ease-out;
+  transition: background-color 0.5s ease-out;
   background-color: unset;
 }
 .slide__sign:hover::after {

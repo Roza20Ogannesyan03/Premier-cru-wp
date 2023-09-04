@@ -1,52 +1,239 @@
+body {
+  position: relative;
+}
 .container-small {
   max-width: 1130px;
 }
+.rest-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px auto 0;
+
+  max-width: 1660px;
+  padding: 0 20px;
+  gap: 25px;
+}
+/*Popup****************************************************************/
+.popup-content {
+  max-width: 1440px;
+  display: none;
+}
+
+.popup-page {
+  display: none;
+}
+
+.inner-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 158px;
+  cursor: pointer;
+}
+.inner-btn.active {
+  color: #fff;
+}
+
+.popup-page {
+  position: fixed;
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 100;
+  display: flex;
+  transition: 0.5s;
+}
+.popup-page.open {
+  left: 0%;
+}
+
+.popup-page .popup-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 80px;
+  overflow: auto;
+  row-gap: 36px;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+/***************************************************************/
 #limonchello {
-  margin-top: 90px;
-  border-radius: 16px;
+  max-width: 816px;
+  height: 448px;
 }
-
-.limonchello__slide {
-  max-width: 1660px !important;
+.slider-wrraper {
   position: relative;
+  margin-top: 60px;
+  height: 448px;
+}
+.rest-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: -1;
+}
+.rest-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.limonchello__swiper-button-next,
-.limonchello__swiper-button-prev {
-  width: 59px !important;
-  height: 59px !important;
-  border-radius: 50px;
-  border: 1px solid black;
-  display: flex !important;
+.rest-background::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.rest-title .title {
+  color: white;
+  margin-bottom: 48px;
+}
+
+.rest-title {
+  max-width: 674px;
+}
+.rest-num {
+  width: 201px;
+}
+
+.rest-num:hover,
+.rest-menu:hover {
+  background-color: #d81010;
+  transition: background-color 0.3s ease-out;
+}
+.inner-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+.inner__block2_text {
+  margin-bottom: 48px;
+}
+.inner__block2_text p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+}
+.rest-menu,
+.rest-num {
+  background-color: transparent;
+  border: 1px solid #d81010;
+
+  width: 214px;
+}
+.rest-btn {
+  border-radius: 4px;
+  height: 56px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
+.inner-btn {
+  background-color: transparent;
+  border: 1px solid #fff !important;
+  width: 158px;
+}
+.rest-buttons {
+  display: flex;
+  gap: 24px;
+}
+/********************************************************************************/
+.rest_white-bgc {
+  background-color: #fff !important;
+}
+.rest_white,
+.rest_white .navigation a {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+.navigation li::after {
+  background-color: #fff;
+}
+.border_white {
+  border: 1px solid white;
+}
+.border_white:hover {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-out;
+}
+
+/***********************************************************************************/
+.limonchello__slide {
+  max-width: 252px !important;
+  position: relative;
+}
+.slider-wrraper {
+  margin-bottom: 100px;
+}
+.hide_arrow {
+  display: none;
+}
+.limonchello__swiper-button-next,
+.limonchello__swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.limonchello__swiper-button-next img,
+.limonchello__swiper-button-prev img {
+  width: 18px;
+  height: 18px;
+  margin: 10px;
+}
+
 .limonchello__swiper-button-prev {
   z-index: 2;
   background-color: #fff;
   position: absolute;
   top: 50%;
-  left: 70px;
+  left: -20px;
   transform: translate(0, -50%);
 }
-
 .limonchello__swiper-button-next {
   z-index: 2;
   background-color: #fff;
   position: absolute;
   top: 50%;
-  right: 70px;
+  right: -20px;
   transform: translate(0, -50%);
 }
 .slide__img {
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 12px;
+}
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 .inner {
-  margin: 64px 0 100px 0;
   display: flex;
   justify-content: space-between;
+  max-width: 1400px;
+  gap: 100px;
 }
 .inner__block1_links {
   width: 199px;
@@ -63,9 +250,7 @@
   color: #000;
 }
 .inner__block1 {
-  position: sticky;
   height: 640px;
-  top: 40px;
 }
 .inner__block1_about-limochello {
   display: flex;
@@ -83,19 +268,14 @@
   height: 76px;
 }
 .about-limochello__item_title {
-  color: #23262f;
+  color: #232323;
 }
 .about-limochello__item_text {
   font-size: 14px;
   line-height: 24px;
 }
 .inner__block2 {
-  max-width: 674px;
-}
-.inner__block2_text p {
-  font-size: 18px;
-  line-height: 27px;
-  color: #000;
+  max-width: 956px;
 }
 .inner__block2_chef {
   min-height: 200px;
@@ -110,7 +290,7 @@
 }
 
 .about-chef {
-  max-width: 352px;
+  max-width: 674px;
   height: 152px;
   display: flex;
   flex-direction: column;
@@ -130,32 +310,30 @@
 .about-chef__text {
   line-height: 24px;
 }
-.inner__block2_events {
-  margin-top: 64px;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-}
-.events__item {
-  max-width: 674px;
-  height: 424px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.events__item-container {
-  width: 100%;
-  height: 360px;
-}
+
 .item__titles {
   font-size: 16px;
   line-height: 32px;
 }
 
-.inner__block2_text-748 {
-  display: none;
+.map {
+  width: 956px;
 }
+
+@media (max-width: 1440px) {
+  .inner {
+    gap: 50px;
+  }
+  .map {
+    width: 850px;
+  }
+}
+
 @media (max-width: 1200px) {
+  .rest-container {
+    flex-direction: column;
+    align-items: center;
+  }
   .inner {
     flex-direction: column;
     gap: 30px;
@@ -165,6 +343,22 @@
     display: flex;
     flex-direction: row-reverse;
     gap: 100px;
+    height: auto;
+  }
+  .inner__block2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .rest-title .title {
+    margin: 0 0 48px 0;
+  }
+  .rest-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .map {
+    width: 100%;
   }
 }
 
@@ -174,6 +368,10 @@
   }
   .limonchello__swiper-button-next {
     right: 30px;
+  }
+  .rest-title .title {
+    font-size: 36px;
+    line-height: 48px;
   }
   .inner__block1 {
     display: flex;
@@ -190,36 +388,47 @@
   .chef-img {
     margin-right: 20px;
   }
-  .inner__block2_text {
-    display: none;
+
+  .rest-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-  .inner__block2_text-748 {
-    margin-top: 50px;
-    display: block;
-    font-size: 16px;
-    line-height: 27px;
-    color: #000;
+  .about-chef__lim,
+  .about-chef__name,
+  .about-chef__text {
+    text-align: center;
   }
-  .events__title {
-    line-height: 40px;
-    margin-right: 0;
-  }
-  .events__item-container {
-    height: 320px;
+  .inner__block1_links {
+    align-items: center;
+    height: 100px;
+    width: 100%;
   }
 
-  .events__item {
-    height: auto;
+  .about-limochello__item {
+    align-items: center;
+  }
+  .about-limochello__item_text {
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  .events__item-container {
-    height: 200px;
-  }
   .limonchello__swiper-button-prev,
   .limonchello__swiper-button-next {
-    width: 40px !important;
-    height: 40px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .inner__block2_chef {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .about-chef p {
+    line-height: 20px;
+  }
+  .inner__block1 {
+    gap: 20px;
+  }
+  .popup-page .popup-content {
+    padding-top: 40px;
   }
 }
