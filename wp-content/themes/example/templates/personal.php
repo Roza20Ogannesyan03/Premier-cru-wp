@@ -17,7 +17,7 @@ get_header(); ?>
       foreach ($personal as $item) {
       ?>
 
-        <a href="<?= $item['personal_img']; ?>" data-lg-size="1600-2400" data-sub-html="<?= $item['personal_name']; ?>">
+        <a href="<?= $item['personal_img']; ?>" data-sub-html="<?= $item['personal_name']; ?>">
           <div class="staff__item">
             <div class="staff__item_container">
               <img src="<?= $item['personal_img']; ?>" alt="" class="staff__item_img" />

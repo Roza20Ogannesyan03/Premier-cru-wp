@@ -40,7 +40,7 @@ get_header(); ?>
                         foreach ($slides as $slide) {
                     ?>
 
-                            <a href="<?= $slide['slider_rest-img']; ?>" data-lg-size="1600-2400" class="limonchello__slide swiper-slide">
+                            <a href="<?= $slide['slider_rest-img']; ?>" class="limonchello__slide swiper-slide">
                                 <img class="slide__img" src="<?= $slide['slider_rest-img']; ?>" alt="" />
                             </a>
                     <?php

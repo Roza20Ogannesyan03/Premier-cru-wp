@@ -68,7 +68,7 @@
   background-color: #d81010;
   color: #fff;
 }
-.contacts {
+.header__contacts {
   width: 183px;
   height: 42px;
   text-align: end;
@@ -125,7 +125,7 @@
     display: none;
   }
 
-  .contacts {
+  .header__contacts {
     display: none;
   }
 
@@ -168,7 +168,7 @@
     height: 50px;
     padding: 14px;
   }
-  .contacts {
+  .header__contacts {
     width: auto;
   }
 

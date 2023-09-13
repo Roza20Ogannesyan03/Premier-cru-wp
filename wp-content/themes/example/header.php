@@ -25,9 +25,9 @@
         <div class="header__container <?php if (is_singular('restaurant')) {
                                             echo 'rest_white';
                                         } ?> ">
-            <div class="logo"><a href="http://premier-cru"><img src="<?php if (is_singular('restaurant')) {
-                                                                            echo get_template_directory_uri(); ?>/assets/images/rest-logo.svg<?php } else {
-                                                                                                                                                echo get_template_directory_uri(); ?>/assets/images/logo.svg <?php } ?>" alt="" /></a></div>
+            <div class="logo"><a href="http://premier-cru.abetadev.beget.tech"><img src="<?php if (is_singular('restaurant')) {
+                                                                                                echo get_template_directory_uri(); ?>/assets/images/rest-logo.svg<?php } else {
+                                                                                                                                                                    echo get_template_directory_uri(); ?>/assets/images/logo.svg <?php } ?>" alt="" /></a></div>
             <div class="menu-popup">
                 <div class="navigation header__nav_popup">
                     <?php
@@ -44,7 +44,7 @@
                 <button class="delivery-button delivery-button__popup">
                     Доставка
                 </button>
-                <div class="contacts contacts__popup">
+                <div class="header__contacts contacts__popup">
                     <div class="contacts__number">
                         <div class="phone-icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.svg" alt="" />

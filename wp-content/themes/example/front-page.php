@@ -104,7 +104,7 @@ get_header(); ?>
           foreach ($qwe as $row) {
           ?>
 
-            <a href="<?= $row['slide_imgg']; ?>" data-lg-size="1600-2400" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+            <a href="<?= $row['slide_imgg']; ?>" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <img src="<?= $row['slide_imgg']; ?>" alt="" />
             </a>
 
@@ -124,7 +124,7 @@ get_header(); ?>
       <div class="events__header">
         <h2 class="events__title">События</h2>
         <span class="events__line"></span>
-        <a class="events__button" href="http://premier-cru/event">
+        <a class="events__button" href="http://premier-cru.abetadev.beget.tech/event">
 
           <p class="button__text">Все события</p>
           <div class="button__img-container">
@@ -174,7 +174,7 @@ get_header(); ?>
         <div class="app__text">
           <div class="app__title wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">Скачивайте приложение Premier CRU</div>
           <div class="app__subtitle wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".2s">
-            Получите скидку до 25% по программе лояльности, только в
+            Получите скидку до 15% по программе лояльности, только в
             мобильном приложении Premier CRU!
           </div>
           <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">

@@ -14,8 +14,8 @@
         <div class="navigation footer__nav">
           <?php
           $args = array(
-            'menu' => 'top',
-            'theme_location' => 'top',
+            'menu' => 'bottom',
+            'theme_location' => 'bottom',
             'container' => false,
             'walker' => new main_service_mobile_menu_Walker,
             'items_wrap' => '%3$s'
@@ -40,7 +40,7 @@
           <p class="white block2__font-1024">
             Процедура заказа в мобильном приложении
           </p>
-          <a href=" http://premier-cru/politika">
+          <a href="http://premier-cru.abetadev.beget.tech/politika">
             <p class="white block2__font-1024">Политика конфиденциальности</p>
           </a>
           <a href="https://abeta.ru/">

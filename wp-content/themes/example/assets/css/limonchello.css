@@ -192,6 +192,10 @@ body.noscroll {
   height: 40px !important;
   border-radius: 50px;
   border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .limonchello__swiper-button-next img,

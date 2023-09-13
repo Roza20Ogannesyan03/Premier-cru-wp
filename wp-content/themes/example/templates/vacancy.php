@@ -22,15 +22,15 @@ Template Name: Вакансии
             <form action="<?php echo get_template_directory_uri(); ?>/mail.php" method="post" class="rezume__form" name="rezume__form" onsubmit="return submitForm(this)" enctype="multipart/form-data">
                 <label for="name">Введите ваше ФИО *</label>
                 <input class="inputs" type="text" name="name" id="name" placeholder="Ваше ФИО">
-                <p class="form__errorsName"></p>
+
 
                 <label for="number">Введите ваш телефон *</label>
                 <input class="inputs" type="tel" name="number" id="number" placeholder="+7 (___) ___-__-__">
-                <p class="form__errorsTel"></p>
+
 
                 <label for="email">Введите ваш e-mail</label>
                 <input class="inputs" type="email" name="email" id="email" placeholder="E-mail">
-                <p class="form__errorsEmail"></p>
+
 
                 <label for="drop_zone">Прикрепите ваше резюме *</label>
                 <div class="dropZoneContainer">
@@ -40,15 +40,15 @@ Template Name: Вакансии
                         <p class="dropZoneOverlay__text">Ваше резюме</p>
                     </div>
                 </div>
-                <p class="form__errorsFile"></p>
+
 
                 <input type="hidden" name="post" id="post">
                 <input type="hidden" name="from" value="<?php echo get_permalink(); ?>">
 
                 <button class="rezume__button">Оставить заявку</button>
                 <label for="select" class="select">
-                    <div class="hz checked">
-                        <input type="checkbox" name="select" id="select" class="sss" onclick="validate()" checked>
+                    <div class="checkbox-checked checked">
+                        <input type="checkbox" name="select" id="select" class="checkbox" onclick="validate()" checked>
                         <div class="galochka"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/check_active.png" alt=""></div>
                     </div>
                     Соглашаюсь с условиями <a href="http://premier-cru/politika/">Политики конфиденциальности</a>
@@ -200,12 +200,12 @@ Template Name: Вакансии
             console.log("Файл не выбран");
         }
     });
-    const hz = document.querySelector('.hz');
-    const sss = document.querySelector('.sss');
+    const checked = document.querySelector('.checkbox-checked');
+    const checkbox = document.querySelector('.checkbox');
 
     function validate() {
 
-        hz.classList.toggle('checked');
+        checked.classList.toggle('checked');
 
     }
 
@@ -247,6 +247,7 @@ Template Name: Вакансии
 
     function submitForm(e) {
         var act = e.getAttribute("action");
+        console.log(e);
         var file = e.querySelector('input[type=file]').files;
         var request = new XMLHttpRequest();
         var formData = new FormData();
@@ -289,41 +290,4 @@ Template Name: Вакансии
         request.send(formData);
         return false;
     }
-
-
-    // function submitForm2(event) {
-    //     event.preventDefault();
-    //     const errorsName = [];
-    //     const errorsTel = [];
-    //     const errorsEmail = [];
-    //     const errorsFile = [];
-
-    //     const formData = new FormData(document.querySelector("form"));
-    //     const name = formData.get("name");
-    //     const tel = formData.get("number");
-    //     const email = formData.get("email");
-    //     const file = formData.get("dropZoneOverlay__text");
-
-    //     if (!name) errorsName.push("Строка пустая");
-    //     showErrorname(errorsName);
-
-    //     if (!tel) errorsTel.push("Строка пустая");
-    //     showErrorTel(errorsTel);
-
-    //     if (!email) errorsEmail.push("Строка пустая");
-    //     showErrorEmail(errorsEmail);
-
-
-    //     if (file === 'Ваше резюме') errorsFile.push("Строка пустая");
-    //     showErrorFile(errorsFile);
-    // }
-    // const showErrorname = (errors) =>
-    //     (document.querySelector(".form__errorsName").innerHTML = errors[0] || "");
-    // const showErrorTel = (errors) =>
-    //     (document.querySelector(".form__errorsTel").innerHTML = errors[0] || "");
-    // const showErrorEmail = (errors) =>
-    //     (document.querySelector(".form__errorsEmail").innerHTML =
-    //         errors[0] || "");
-    // const showErrorFile = (errors) =>
-    //     (document.querySelector(".form__errorsFile").innerHTML = errors[0] || "");
 </script>
