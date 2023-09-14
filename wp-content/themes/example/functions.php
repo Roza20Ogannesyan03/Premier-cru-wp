@@ -58,6 +58,10 @@ function add_scripts_and_styles()
         wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
     }
 
+    if (is_post_type_archive('command')) {
+        wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
+        wp_enqueue_style('staff', get_template_directory_uri() . '/assets/css/staff.css');
+    }
 
     if (is_singular('restaurant')) {
         wp_enqueue_style('limonchello', get_template_directory_uri() . '/assets/css/limonchello.css');

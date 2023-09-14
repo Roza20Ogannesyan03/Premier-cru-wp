@@ -39,9 +39,8 @@ get_header();
                         <div class="all-events__item">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="item__img-container">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
-                                    </a>
+                                    <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
+
                                     <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
 
 

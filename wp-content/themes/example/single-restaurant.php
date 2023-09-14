@@ -14,7 +14,7 @@ get_header(); ?>
 
     <div class="rest-container">
         <div class="rest-title">
-            <h1 class="title">Ресторан <?php the_title(); ?></h1>
+            <h1 class="title"><?php the_title(); ?></h1>
 
             <div class="inner__block2_text">
                 <?php the_content(); ?>
@@ -61,7 +61,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="container popup-content">
-            <div class="close"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt=""></div>
+            <div class="close-popup"><img class="close__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt=""></div>
             <div class="inner">
                 <div class="inner__block1">
                     <div class="inner__block1_links">
@@ -107,16 +107,33 @@ get_header(); ?>
                         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af081c23bc31a05c83a58a85795c9eb024a9422b1772eb0bf2640c40b3d9bcf98&amp;width=100%25&amp;height=396&amp;lang=ru_RU&amp;scroll=true"></script>
                     </div>
                     <div class="inner__block2_chef">
+
+
+
+
                         <div class="about-chef">
-                            <p class="about-chef__lim"><?php the_field('shef_restorana'); ?></p>
-                            <p class="about-chef__name"><?php the_field('chef_name'); ?></p>
-                            <p class="about-chef__text">
-                                <?php the_field('chef_text'); ?>
-                            </p>
+
+
+                            <p class="about-chef__lim">Шеф повар ресторана <?php the_title(); ?></p>
+                            <?php
+                            $shef = get_field('shef');
+                            if ($shef) : ?>
+                                <p class="about-chef__name"><?php echo esc_html($shef->post_title); ?></p>
+                            <?php endif; ?>
+                            <?php if ($shef) : ?>
+                                <p class="about-chef__text"><?php echo esc_html($shef->post_content); ?></p>
+                            <?php endif; ?>
                         </div>
-                        <div class="chef-img">
-                            <img src="<?php the_field('chef_img'); ?>" alt="" />
+
+                        <div class="chef-img_cont">
+                            <?php
+                            if ($shef) : ?>
+                                <?php echo get_the_post_thumbnail($shef->ID, 'medium'); ?>
+                            <?php endif; ?>
+
                         </div>
+
+
                     </div>
                 </div>
             </div>

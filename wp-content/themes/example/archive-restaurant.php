@@ -25,36 +25,35 @@ get_header(); ?>
         if ($post_query->have_posts()) {
         ?>
             <div class="restaraunts">
-                <div class="restaurants__row" id="restaurantsResponse">
-                    <?php
-                    while ($post_query->have_posts()) {
-                        $post_query->the_post();
-                        $post_query->post;
-                    ?>
+                <?php
+                while ($post_query->have_posts()) {
+                    $post_query->the_post();
+                    $post_query->post;
+                ?>
 
-                        <div class="all-events__item">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="item__img-container">
+                    <div class="all-events__item">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="item__img-container">
 
-                                    <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
+                                <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
 
-                                    <div class="slide__sign">
-                                        <img class="slide__sign_img" src="<?php the_field('sign_img'); ?>" alt="" />
-                                    </div>
-
-
+                                <div class="slide__sign">
+                                    <img class="slide__sign_img" src="<?php the_field('sign_img'); ?>" alt="" />
                                 </div>
 
-                                <a class="item__titles"><?php the_title(); ?></a>
 
-                                <h5 class="item__subtitle"><?php the_excerpt(); ?></h5>
-                            </a>
-                        </div>
+                            </div>
 
-                    <?php
-                    } ?>
-                    <?php wp_reset_postdata(); ?>
-                </div>
+                            <a class="item__titles"><?php the_title(); ?></a>
+
+                            <h5 class="item__subtitle"><?php the_excerpt(); ?></h5>
+                        </a>
+                    </div>
+
+                <?php
+                } ?>
+                <?php wp_reset_postdata(); ?>
+
             </div>
         <?php } ?>
 

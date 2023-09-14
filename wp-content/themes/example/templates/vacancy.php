@@ -17,7 +17,7 @@ Template Name: Вакансии
 
     <div id="modal-callback" class="modal">
         <div class="rezume modal-content">
-            <div class="close"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt=""></div>
+            <div class="close"><img class="vac__close_img" src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt=""></div>
             <h1 class="rezume__title">Оставьте свой отклик на вакансию</h1>
             <form action="<?php echo get_template_directory_uri(); ?>/mail.php" method="post" class="rezume__form" name="rezume__form" onsubmit="return submitForm(this)" enctype="multipart/form-data">
                 <label for="name">Введите ваше ФИО *</label>
@@ -238,7 +238,7 @@ Template Name: Вакансии
         });
     });
 
-    const close = document.querySelector(".close");
+    const close = document.querySelector(".vac__close_img");
     close.addEventListener('click', function() {
         rez.style.display = 'none';
         black.classList.remove('black');

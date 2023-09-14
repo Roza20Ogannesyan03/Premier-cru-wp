@@ -1,5 +1,4 @@
 <?php
-
 //define('SITE_KEY', '1234');
 //define('SECRET_KEY', '1234');
 
@@ -37,6 +36,7 @@ if ($_POST) {
     $error_output = '';
 
     if (!empty($errors)) {
+
         $error_output  .= '<ul class="errors-list">';
 
         foreach ($errors as $key => $value) {
@@ -49,9 +49,10 @@ if ($_POST) {
 
 
         http_response_code(422);
+        echo $error_output;
+        die();
     }
-    echo $error_output;
-    die();
+
     /*$message = "ФИО - ".$_POST['callback-name']."\nТелефон - ".$_POST['callback-mobile']."\nСтаница откуда отправили форму - ".$_POST['callback-from'];*/
 
     $name = $_POST['name-contacts'];

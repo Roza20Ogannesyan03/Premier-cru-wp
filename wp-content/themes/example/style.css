@@ -128,7 +128,7 @@ button {
   margin-bottom: 100px;
 }
 .more {
-  width: 200px;
+  width: 230px;
 }
 .pages {
   display: none !important;
@@ -140,8 +140,8 @@ button {
 .pagination__page-item {
   display: inline-flex;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   color: white;
   margin-right: 10px;
@@ -150,17 +150,29 @@ button {
   justify-content: center;
 }
 .pagination__page-item:hover {
-  color: #a4a4a4;
+  color: #fff;
+  background-color: #d2d4d7;
+  transition: background-color 0.4s ease-out;
 }
 .pagination__page .active {
   background-color: #d2d4d7;
 }
 
 .more__btn {
-  font-weight: 700;
+  border: 1px solid #191818;
+  border-radius: 4px;
+  font-weight: 600;
+  height: 48px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
 }
 .more__btn:hover {
-  color: #a4a4a4;
+  color: #fff;
+  background-color: #191818;
+  transition: background-color 0.4s ease-out;
 }
 
 .privacy {
@@ -509,8 +521,16 @@ button {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
   height: 35px;
+}
+.vac__close_img {
+  cursor: pointer;
+}
+.close-popup {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 36px;
 }
 .select {
   display: flex;
@@ -781,16 +801,21 @@ input[type="checkbox"] {
   gap: 30px;
 }
 .contacts__inner {
-  width: 290px;
+  width: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .contacts__inner_item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+}
+.phones__item {
+  display: flex;
+  gap: 30px;
 }
 .contacts__inner_text {
   font-size: 16px;
@@ -830,27 +855,38 @@ input[type="checkbox"] {
   margin-top: 20px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .contacts__form {
     max-width: 550px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .contacts__form {
     max-width: 450px;
   }
 }
 
-@media (max-width: 900px) {
-  .contacts {
+@media (max-width: 950px) {
+  .contacts-block {
     flex-direction: column;
     width: 90%;
+    margin: 100 auto 0;
   }
   .contacts__form {
     max-width: 100%;
   }
   .contacts__inner {
     width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 463px) {
+  .phones__item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contacts__inner_content {
+    font-size: 18px;
   }
 }

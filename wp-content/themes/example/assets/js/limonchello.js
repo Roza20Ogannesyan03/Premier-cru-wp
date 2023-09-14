@@ -25,7 +25,7 @@ const popupRest = document.querySelector("#popup-page");
 const page = document.querySelector(".popup-content");
 const bodyRest = document.body;
 const buttonRest = document.querySelector("#inner-btn");
-const close = document.querySelector(".close");
+const close = document.querySelector(".close__img");
 const menuIcon = document.querySelector(".menu__burger-icon");
 buttonRest.addEventListener("click", hambHandler);
 
@@ -43,13 +43,6 @@ function renderPopupRest() {
   popupRest.appendChild(page);
 }
 
-// Код для закрытия меню при нажатии на ссылку
-
-const linksRest = Array.from(page.children);
-
-linksRest.forEach((link) => {
-  link.addEventListener("click", closeOnClick);
-});
 close.addEventListener("click", closeOnClick);
 function closeOnClick() {
   if (window.screen.width <= 1200) {

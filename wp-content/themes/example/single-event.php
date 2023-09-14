@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <main>
-    <div class="container">
+    <div class="container-large">
         <ul class="breadcrumb">
 
             <?php if (function_exists('bcn_display')) {
@@ -15,13 +15,13 @@ get_header(); ?>
         <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/background.png" alt="" />
     </div>
     <div class="container-small">
-        <h1 class="title">Дарим Скидку -20% в день рождения!</h1>
+        <h1 class="title"><?php the_title(); ?></h1>
         <div class="discount-img-container">
             <?php
             $img = get_field('discount_img');
             if ($img) {
             ?>
-                <img src="<?= $img ?>" alt="" class="discount-img" />
+                <img src="<?= $img ?>" alt="<?php the_title(); ?>" class="discount-img" />
             <?php
             }
             ?>
@@ -39,7 +39,7 @@ get_header(); ?>
 
                     <p class="button__text">Все события</p>
                     <div class="button__img-container">
-                        <img class="button__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt="" />
+                        <img class="button__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt="arrow" />
                     </div>
                 </a>
             </div>

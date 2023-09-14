@@ -5,7 +5,7 @@ Template Name: Контакты
 get_header(); ?>
 
 
-<div class="container">
+<div class="container-large">
     <ul class="breadcrumb">
 
         <?php if (function_exists('bcn_display')) {
@@ -21,13 +21,36 @@ get_header(); ?>
     <div class="contacts-block">
         <div class="contacts__inner">
             <div class="contacts__inner_item">
-                <p class="contacts__inner_text">Телефон</p>
-                <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+                <p class="contacts__phones">Телефоны</p>
+                <div class="phones__item">
+                    <p class="contacts__inner_text">Отдел маркетинга:</p>
+                    <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+                </div>
+
+                <div class="phones__item">
+                    <p class="contacts__inner_text">Отдел кадров:</p>
+                    <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+                </div>
+
+                <div class="phones__item">
+                    <p class="contacts__inner_text">Отдел закупок:</p>
+                    <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+                </div>
+
+                <div class="phones__item">
+                    <p class="contacts__inner_text">Финансовый отдел:</p>
+                    <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+                </div>
+
+                <div class="phones__item">
+                    <p class="contacts__inner_text">Юридический отдел:</p>
+                    <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+                </div>
             </div>
 
             <div class="contacts__inner_item">
                 <p class="contacts__inner_text">Адрес</p>
-                <p class="contacts__inner_content">г. Владикавказ, пр. Мира, 45</p>
+                <p class="contacts__inner_content">г. Владикавказ, Проспект Мира д.1</p>
             </div>
 
             <div class="contacts__inner_item">
@@ -44,12 +67,10 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <form action="<?php get_template_directory_uri(); ?>/mailcontacts.php" method="post" class="contacts__form" name="contacts__form" onsubmit="return submitForm(this)" enctype="multipart/form-data">
-            <?
+        <form action="<?php echo get_template_directory_uri(); ?>/mailcontacts.php" method="post" class="contacts__form" onsubmit="return submitForm(this)">
 
-            var_dump(get_template_directory_uri() . "/mail-contacts.php");
+            <h1 class="rezume__title">Форма связи</h1>
 
-            ?>
             <label for="name">Ваше имя *</label>
             <input class="inputs" type="text" name="name-contacts" id="name-contacts" placeholder="Ваше имя">
 
@@ -73,7 +94,7 @@ get_header(); ?>
         </form>
     </div>
     <div class="contacts__map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af081c23bc31a05c83a58a85795c9eb024a9422b1772eb0bf2640c40b3d9bcf98&amp;width=100%25&amp;height=396&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9da30f81ed1ac3e78dc4f71d025a4e7b4774d360f5c8d75d6ff6673d82573fca&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
 </div>
 
@@ -89,12 +110,12 @@ get_header(); ?>
         var act = e.getAttribute("action");
         console.log(e);
         var request = new XMLHttpRequest();
-        var formData = new FormData();
+        var formData = new FormData(e);
         for (let formItem of e) {
             formData.append(formItem.name, formItem.value);
         }
-        request.open('POST', act, true);
         request.onreadystatechange = function() {
+
             if (request.readyState === 4) {
                 if (request.status === 422) {
                     e.querySelector('.response').innerHTML = request.response;
@@ -121,9 +142,10 @@ get_header(); ?>
 
             }
 
-            request.send(formData);
-            return false;
         }
+        request.open('POST', act, true);
+        request.send(formData);
+        return false;
     }
 </script>
 <?php get_footer(); ?>
