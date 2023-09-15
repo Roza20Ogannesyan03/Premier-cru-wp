@@ -41,3 +41,20 @@
   text-align: center;
   margin-top: 4px;
 }
+#text {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .staff__item {
+    width: 280px;
+  }
+  .staff {
+    margin: 80px auto;
+  }
+  .staff__item_container {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 24px;
+  }
+}

@@ -27,9 +27,12 @@ get_header(); ?>
         while ($post_query->have_posts()) {
           $post_query->the_post();
           $post_query->post;
+          $s = get_the_post_thumbnail_url($post_query->ID, 'medium_large');
         ?>
 
-          <a href="">
+
+
+          <a href="<?php echo $s; ?>">
             <div class=" staff__item">
               <div class="staff__item_container">
                 <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "staff__item_img")); ?>

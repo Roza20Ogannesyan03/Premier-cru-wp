@@ -32,7 +32,7 @@ if ($_POST) {
         $errors['email'] = 'Введите Ваш Email';
     }
 
-    $domain = 'http://premier-cru/wp-content/themes/example';
+    $domain = '';
     $uploaddir = './upload/';
     $links = [];
     foreach ($_FILES as $file) {

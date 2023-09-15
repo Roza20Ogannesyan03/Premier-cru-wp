@@ -5,14 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-
-        <?php
-        if (is_404()) {
-            echo 'Ошибка 404';
-        } else the_title();
-        ?>
-    </title>
     <?php wp_head(); ?>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -42,11 +34,25 @@
         <div class="header__container <?php if (is_singular('restaurant')) {
                                             echo 'rest_white';
                                         } ?> ">
-            <div class="logo"><a href="http://premier-cru.abetadev.beget.tech"><img src="<?php if (is_singular('restaurant')) {
-                                                                                                echo get_template_directory_uri(); ?>/assets/images/rest-logo.svg<?php } else {
-                                                                                                                                                                    echo get_template_directory_uri(); ?>/assets/images/logo.svg <?php } ?>" alt="" /></a></div>
+            <?php if (!is_front_page()) { ?>
+                <div class="logo">
+                    <a href="<?php echo get_home_url(); ?>">
+                        <img src="<?php if (is_singular('restaurant')) {
+                                        echo get_template_directory_uri(); ?>/assets/images/rest-logo.svg<?php } else {
+                                                                                                            echo get_template_directory_uri(); ?>/assets/images/logo.svg <?php } ?>" alt="" />
+                    </a>
+                </div>
+            <?php } else { ?>
+                <div class="logo">
+                    <span>
+                        <img src="<?php if (is_singular('restaurant')) {
+                                        echo get_template_directory_uri(); ?>/assets/images/rest-logo.svg<?php } else {
+                                                                                                            echo get_template_directory_uri(); ?>/assets/images/logo.svg <?php } ?>" alt="" />
+                    </span>
+                </div>
+            <?php } ?>
             <div class="menu-popup">
-                <div class="navigation header__nav_popup">
+                <ul class="navigation header__nav_popup">
                     <?php
                     $args = array(
                         'menu' => 'top',
@@ -57,8 +63,8 @@
                     );
                     wp_nav_menu($args);
                     ?>
-                </div>
-                <a href="http://premier-cru/dostavka" class="delivery-button delivery-button__popup">
+                </ul>
+                <a href="" class="delivery-button delivery-button__popup">
                     Доставка
                 </a>
                 <div class="header__contacts contacts__popup">
@@ -74,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="navigation header__nav">
+            <ul class="navigation header__nav">
                 <?php
                 $args = array(
                     'menu' => 'top',
@@ -85,12 +91,11 @@
                 );
                 wp_nav_menu($args);
                 ?>
-            </div>
-            <a href="http://premier-cru/dostavka">
+            </ul>
 
-                <button class="delivery-button <?php if (is_singular('restaurant')) {
+            <a href="" class="delivery-button <?php if (is_singular('restaurant')) {
                                                     echo 'rest_white border_white';
-                                                } ?> ">Доставка</button> </a>
+                                                } ?> ">Доставка</a>
             <div class="contacts">
                 <div class="contacts__number">
                     <div class="phone-icon">

@@ -51,7 +51,9 @@ Template Name: Вакансии
                         <input type="checkbox" name="select" id="select" class="checkbox" onclick="validate()" checked>
                         <div class="galochka"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/check_active.png" alt=""></div>
                     </div>
-                    Соглашаюсь с условиями <a href="http://premier-cru/politika/">Политики конфиденциальности</a>
+                    <div class="check__polit">
+                        <p>Соглашаюсь с условиями</p> <a href="/politika/">Политики конфиденциальности</a>
+                    </div>
                 </label>
                 <div class="response"></div>
             </form>
@@ -192,10 +194,12 @@ Template Name: Вакансии
     const fileIcon = document.querySelector('.rezumeIcon');
 
     document.getElementById('drop_zone').addEventListener('change', function() {
-        if (this.value) {
+        if (document.getElementById('drop_zone').value) {
+            console.log(this.value);
             fileText.innerHTML = this.value.split('\\').pop().split('/').pop();
+
             fileIcon.src = "<?php echo get_template_directory_uri(); ?>/assets/images/iconrezumeLoad.png";
-            console.log(fileIcon.src);
+
         } else {
             console.log("Файл не выбран");
         }

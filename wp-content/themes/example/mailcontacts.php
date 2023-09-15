@@ -32,7 +32,6 @@ if ($_POST) {
     }
 
 
-
     $error_output = '';
 
     if (!empty($errors)) {

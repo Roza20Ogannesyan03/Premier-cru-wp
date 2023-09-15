@@ -4,14 +4,24 @@
       <div class="block1">
         <div class="block1__logo">
           <div class="footer__logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png" alt="" />
+            <?php if (!is_front_page()) { ?>
+              <a href="<?php echo get_home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png" alt="" />
+              </a>
+
+            <?php } else { ?>
+              <span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png" alt="" />
+              </span>
+            <?php } ?>
+
           </div>
           <p class="white footer__logo_subtitle">
             Управляющая компания «Премьер КРЮ»
           </p>
         </div>
 
-        <div class="navigation footer__nav">
+        <ul class="navigation footer__nav">
           <?php
           $args = array(
             'menu' => 'bottom',
@@ -22,7 +32,7 @@
           );
           wp_nav_menu($args);
           ?>
-        </div>
+        </ul>
 
         <div class="footer__contacts">
           <div class="footer__number"><a class="footer__number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">Служба качества +<?php the_field('number', 'option'); ?></a></div>
@@ -40,7 +50,7 @@
           <p class="white block2__font-1024">
             Процедура заказа в мобильном приложении
           </p>
-          <a href="http://premier-cru.abetadev.beget.tech/politika">
+          <a href="/politika/">
             <p class="white block2__font-1024">Политика конфиденциальности</p>
           </a>
           <a href="https://abeta.ru/">

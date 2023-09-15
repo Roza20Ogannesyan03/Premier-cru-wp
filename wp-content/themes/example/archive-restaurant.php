@@ -33,7 +33,7 @@ get_header(); ?>
 
                     <div class="all-events__item">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="item__img-container">
+                            <div class="item__img-container scale">
 
                                 <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
 

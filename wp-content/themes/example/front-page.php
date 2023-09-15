@@ -124,7 +124,7 @@ get_header(); ?>
       <div class="events__header">
         <h2 class="events__title">События</h2>
         <span class="events__line"></span>
-        <a class="events__button" href="http://premier-cru.abetadev.beget.tech/event">
+        <a class="events__button" href="/event/">
 
           <p class="button__text">Все события</p>
           <div class="button__img-container">
@@ -177,17 +177,14 @@ get_header(); ?>
             Получите скидку до 15% по программе лояльности, только в
             мобильном приложении Premier CRU!
           </div>
-          <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
-            <a href="<?php the_field('link_appstore', 'option'); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
-            </a>
-          </button>
+          <a href="<?php the_field('link_appstore', 'option'); ?>" class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
+          </a>
 
-          <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
-            <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
-            </a>
-          </button>
+          <a href="<?php the_field('link_googleplay', 'option'); ?>" class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
+          </a>
+
         </div>
 
         <img class="app__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/Frame 55473.png" alt="" />

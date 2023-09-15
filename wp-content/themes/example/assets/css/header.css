@@ -59,7 +59,10 @@
   height: 44px;
   border: 1px solid #d81010;
   border-radius: 4px;
-  padding: 12px, 24px, 12px, 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   font-family: "Century Gothic";
 }
@@ -116,6 +119,11 @@
 .popup {
   display: none;
 }
+.contacts {
+  width: 183px;
+  height: 42px;
+  text-align: end;
+}
 
 @media (max-width: 1200px) {
   .header__nav {
@@ -128,23 +136,24 @@
   .header__contacts {
     display: none;
   }
+  .contacts {
+    display: none;
+  }
 
   .popup .header__nav_popup {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: auto;
   }
   .header__nav_popup .menu__link {
     color: #fff;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .header__nav_popup .menu__item:nth-child(3) {
-    width: 200px;
-    margin-left: 55px;
+    width: 170px;
   }
   .header__nav_popup .menu__sub {
     display: none;
@@ -177,6 +186,8 @@
     flex-direction: column-reverse;
     align-items: center;
     gap: 10px;
+    width: 245px;
+    margin-left: -20px;
   }
   .phone-icon {
     display: none;
@@ -265,9 +276,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: start;
-    padding: 50px 0;
+    padding: 50px 70px;
     overflow: auto;
     gap: 50px;
   }

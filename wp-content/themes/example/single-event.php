@@ -35,7 +35,7 @@ get_header(); ?>
             <div class="events__header">
                 <h2 class="events__title">другие события</h2>
                 <span class="events__line"></span>
-                <a class="events__button" href="http://premier-cru/event">
+                <a class="events__button" href="/event/">
 
                     <p class="button__text">Все события</p>
                     <div class="button__img-container">

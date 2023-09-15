@@ -15,7 +15,6 @@ get_header(); ?>
     <h1 class="title">Контакты</h1>
 </div>
 
-
 <div class="container">
 
     <div class="contacts-block">
@@ -134,6 +133,7 @@ get_header(); ?>
                         input.style.borderColor = "#da4c4c";
                         input.classList.add('error');
                         // console.log(input);
+
                     });
                 } else {
                     e.querySelector('.response').innerHTML = request.response;
@@ -143,6 +143,7 @@ get_header(); ?>
             }
 
         }
+
         request.open('POST', act, true);
         request.send(formData);
         return false;

@@ -104,8 +104,8 @@
 
 @media (max-width: 480px) {
   .title {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 42px;
   }
   .events__header {
     align-items: center;
