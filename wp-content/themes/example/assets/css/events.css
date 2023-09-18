@@ -107,6 +107,10 @@
   opacity: 0;
   transition: opacity 0.35s ease-out;
 }
+.img-container img {
+  width: 24px;
+  height: 24px;
+}
 
 .item__img-container {
   max-width: 533px;
