@@ -64,7 +64,7 @@
                     wp_nav_menu($args);
                     ?>
                 </ul>
-                <a href="" class="delivery-button delivery-button__popup">
+                <a href="/dostavka/" class="delivery-button delivery-button__popup">
                     Доставка
                 </a>
                 <div class="header__contacts contacts__popup">
@@ -93,9 +93,9 @@
                 ?>
             </ul>
 
-            <a href="" class="delivery-button <?php if (is_singular('restaurant')) {
-                                                    echo 'rest_white border_white';
-                                                } ?> ">Доставка</a>
+            <a href="/dostavka/" class="delivery-button <?php if (is_singular('restaurant')) {
+                                                            echo 'rest_white border_white';
+                                                        } ?> ">Доставка</a>
             <div class="contacts">
                 <div class="contacts__number">
                     <div class="phone-icon">

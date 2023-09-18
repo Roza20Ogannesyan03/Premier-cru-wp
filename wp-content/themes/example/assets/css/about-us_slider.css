@@ -20,6 +20,7 @@
   position: relative;
   z-index: 2;
   transition: background-color 0.5s;
+  margin-top: -1px;
 }
 .about-us__slide_img::after,
 .slide__sign::after {

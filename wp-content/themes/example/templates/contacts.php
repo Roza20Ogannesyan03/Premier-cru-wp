@@ -12,15 +12,15 @@ get_header(); ?>
             bcn_display();
         } ?>
     </ul>
-    <h1 class="title">Контакты</h1>
+
 </div>
 
-<div class="container">
-
+<div class="container-small">
+    <h1 class="title">Контакты</h1>
     <div class="contacts-block">
         <div class="contacts__inner">
             <div class="contacts__inner_item">
-                <p class="contacts__phones">Телефоны</p>
+                <p class="contacts__phones contacts__item_title">Телефоны</p>
                 <div class="phones__item">
                     <p class="contacts__inner_text">Отдел маркетинга:</p>
                     <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
@@ -48,17 +48,17 @@ get_header(); ?>
             </div>
 
             <div class="contacts__inner_item">
-                <p class="contacts__inner_text">Адрес</p>
+                <p class="contacts__inner_text contacts__item_title">Адрес</p>
                 <p class="contacts__inner_content">г. Владикавказ, Проспект Мира д.1</p>
             </div>
 
             <div class="contacts__inner_item">
-                <p class="contacts__inner_text">Наша почта</p>
+                <p class="contacts__inner_text contacts__item_title">Наша почта</p>
                 <a class="contacts__inner_content" href="mailto:">premier-cru@gmail.com</a>
             </div>
 
             <div class="contacts__inner_item">
-                <p class="contacts__inner_text">Мы в соц. сетях</p>
+                <p class="contacts__inner_text contacts__item_title">Мы в соц. сетях</p>
                 <div class="contacts_network">
                     <a href="<?php the_field('link_instagram', 'option'); ?>"><img class="contacts__icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/insta-contacts.png" alt="" /></a>
                     <a href="<?php the_field('link_facebook', 'option'); ?>"><img class="contacts__fb" src="<?php echo get_template_directory_uri(); ?>/assets/images/fb.png" alt="" /></a>
@@ -66,31 +66,33 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <form action="<?php echo get_template_directory_uri(); ?>/mailcontacts.php" method="post" class="contacts__form" onsubmit="return submitForm(this)">
+        <div class="contacts__form">
+            <form action="<?php echo get_template_directory_uri(); ?>/mailcontacts.php" method="post" onsubmit="return submitForm(this)">
 
-            <h1 class="rezume__title">Форма связи</h1>
+                <h1 class="rezume__title">Форма связи</h1>
 
-            <label for="name">Ваше имя *</label>
-            <input class="inputs" type="text" name="name-contacts" id="name-contacts" placeholder="Ваше имя">
-
-
-            <label for="number">Ваш телефон *</label>
-            <input class="inputs" type="tel" name="number-contacts" id="number-contacts" placeholder="+7 (___) ___-__-__">
+                <label for="name">Ваше имя *</label>
+                <input class="inputs" type="text" name="name-contacts" id="name-contacts" placeholder="Ваше имя">
 
 
-            <label for="message" class="textarea-cont">Ваше сообщение</label>
-            <textarea name="message" id="message" class="inputs message"></textarea>
+                <label for="number">Ваш телефон *</label>
+                <input class="inputs" type="tel" name="number-contacts" id="number-contacts" placeholder="+7 (___) ___-__-__">
 
-            <label for="select" class="select">
-                <div class="checkbox-checked checked">
-                    <input type="checkbox" name="select" id="select" class="checkbox" onclick="validate()" checked>
-                    <div class="galochka"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/check_active.png" alt=""></div>
-                </div>
-                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-            </label>
-            <button class="contacts__button">Отправить</button>
-            <div class="response"></div>
-        </form>
+
+                <label for="message" class="textarea-cont">Ваше сообщение</label>
+                <textarea name="message" id="message" class="inputs message"></textarea>
+
+                <label for="select" class="select">
+                    <div class="checkbox-checked checked">
+                        <input type="checkbox" name="select" id="select" class="checkbox" onclick="validate()" checked>
+                        <div class="galochka"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/check_active.png" alt=""></div>
+                    </div>
+                    Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+                </label>
+                <button class="contacts__button">Отправить</button>
+                <div class="response"></div>
+            </form>
+        </div>
     </div>
     <div class="contacts__map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9da30f81ed1ac3e78dc4f71d025a4e7b4774d360f5c8d75d6ff6673d82573fca&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>

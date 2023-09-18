@@ -59,7 +59,7 @@ get_header(); ?>
                         <div class="all-events__item randomly wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
                             <div class="item__img-container">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
+                                    <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/red-arrow.png" alt=""></div>
                                 </a>
                                 <a href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
@@ -86,7 +86,7 @@ get_header(); ?>
                 <div class="app__text">
                     <div class="app__title wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">Скачивайте приложение Premier CRU</div>
                     <div class="app__subtitle wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".2s">
-                        Получите скидку до 25% по программе лояльности, только в
+                        Получите скидку до 15% по программе лояльности, только в
                         мобильном приложении Premier CRU!
                     </div>
                     <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">

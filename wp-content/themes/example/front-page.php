@@ -148,7 +148,7 @@ get_header(); ?>
             <div class="all-events__item randomly wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <div class="item__img-container">
                 <a href="<?php the_permalink(); ?>">
-                  <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt=""></div>
+                  <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/red-arrow.png" alt=""></div>
                 </a>
                 <a href="<?php the_permalink(); ?>">
                   <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>

@@ -77,11 +77,14 @@ body {
 .item__img-container {
   position: relative;
 }
-
 .scale {
+  overflow: hidden;
+}
+
+.scale .item__img-container_img {
   transition: 1s; /* Время эффекта */
 }
-.scale:hover {
+.scale .item__img-container_img:hover {
   transform: scale(1.07);
 }
 
