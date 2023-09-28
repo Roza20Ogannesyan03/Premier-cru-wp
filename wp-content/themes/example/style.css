@@ -464,24 +464,6 @@ button {
   background-color: #000;
   display: block;
 }
-/*
-.vacancy__title:nth-child(1):after {
-  margin-left: 60px;
-}
-
-.vacancy__title:nth-child(2):after {
-  margin-left: 100px;
-}
-
-.vacancy__title:nth-child(3):after {
-  margin-left: 45px;
-}
-
-.vacancy__title:nth-child(4):after {
-  margin-left: 40px;
-}
-*/
-
 .send {
   border: 1px solid #000;
   border-radius: 4px;
@@ -538,47 +520,6 @@ button {
   align-items: center;
   gap: 7px;
 }
-/*
-input[type="checkbox"]::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 91%;
-  height: 91%;
-  top: -1;
-  left: -1;
-  border: 2px solid #000;
-}
-
-input[type="checkbox"]:checked::before {
-  content: "";
-  position: absolute;
-  width: 91%;
-  height: 91%;
-  top: -1;
-  left: -1;
-  display: block;
-  z-index: 22;
-
-  border: 2px solid #000;
-}
-
-input[type="checkbox"]:checked::after {
-  content: "";
-  position: absolute;
-  width: 91%;
-  height: 91%;
-  top: 1;
-  left: 1;
-  display: block;
-  z-index: 22;
-  background-color: #000;
-
-  border-left: 4px solid #e145a3;
-  border-bottom: 4px solid #e145a3;
-  transform: rotate(-45deg);
-}
-*/
 input[type="checkbox"] {
   width: 24px;
   height: 24px;
@@ -800,7 +741,12 @@ input[type="checkbox"] {
   color: #a4a4a4;
   transition: color 0.4s ease-out;
 }
-
+.contacts__title {
+  font-size: 36px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 .contacts-block {
   display: flex;
   justify-content: space-between;
@@ -826,12 +772,13 @@ input[type="checkbox"] {
 .phones__item {
   display: flex;
   gap: 30px;
+  justify-content: space-between;
 }
 .contacts__inner_text {
   font-size: 16px;
 }
 .contacts__inner_content {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
 }
 .contacts_network {

@@ -46,7 +46,6 @@ get_header(); ?>
 
                             <a class="item__titles"><?php the_title(); ?></a>
 
-                            <h5 class="item__subtitle"><?php the_excerpt(); ?></h5>
                         </a>
                     </div>
 

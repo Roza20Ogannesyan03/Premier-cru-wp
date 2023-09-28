@@ -69,7 +69,7 @@ get_header(); ?>
         <div class="contacts__form">
             <form action="<?php echo get_template_directory_uri(); ?>/mailcontacts.php" method="post" onsubmit="return submitForm(this)">
 
-                <h1 class="rezume__title">Форма связи</h1>
+                <h1 class="contacts__title">Форма связи</h1>
 
                 <label for="name">Ваше имя *</label>
                 <input class="inputs" type="text" name="name-contacts" id="name-contacts" placeholder="Ваше имя">
