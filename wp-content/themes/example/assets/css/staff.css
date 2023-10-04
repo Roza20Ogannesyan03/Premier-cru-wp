@@ -1,18 +1,19 @@
 .staff {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   margin-bottom: 90px;
   column-gap: 35px;
   row-gap: 40px;
 }
+
 .staff__item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 300px;
+  height: 400px;
 }
 .staff__item_container {
   width: 300px;
@@ -24,12 +25,11 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 100%;
 }
 .staff__item_name {
   font-weight: 700;
   line-height: 24px;
-  counter-reset: #23262f;
+  color: #23262f;
 }
 .staff__item_text {
   font-size: 14px;
@@ -39,7 +39,7 @@
 
 .staff__item p {
   text-align: center;
-  margin-top: 4px;
+  line-height: 170%;
 }
 #text {
   display: none;
