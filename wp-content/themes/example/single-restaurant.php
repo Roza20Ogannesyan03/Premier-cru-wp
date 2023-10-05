@@ -77,7 +77,7 @@ get_header(); ?>
                 <div class="inner__block1">
                     <div class="inner__block1_links">
                         <a class="underline" href=""><?php the_field('posmotret_menyu'); ?></a>
-                        <a class="underline" href="tel:+7 8672 40 36 60"><?php the_field('number'); ?></a>
+                        <a class="underline" href="<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
                         <a class="underline" href=""><?php the_field('3d_tour'); ?></a>
                     </div>
                     <div class="inner__block1_about-limochello">

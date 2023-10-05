@@ -54,7 +54,8 @@
 .events__button {
   display: flex;
   justify-content: space-between;
-  width: 130px;
+  align-items: center;
+  width: 125px;
   height: 24px;
 }
 
@@ -63,10 +64,6 @@
   line-height: 24px;
   text-transform: uppercase;
   color: #777e90;
-}
-.button__img-container {
-  width: 24px;
-  height: 24px;
 }
 
 .all-events {
@@ -107,6 +104,11 @@
   opacity: 0;
   transition: opacity 0.35s ease-out;
 }
+.img-container path {
+  fill: #fff;
+  stroke: #fff;
+}
+
 .img-container img {
   width: 24px;
   height: 24px;

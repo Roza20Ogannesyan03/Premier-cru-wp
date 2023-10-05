@@ -7,7 +7,6 @@ const swiper1 = new Swiper(document.getElementById("limonchello"), {
 
   slidesPerView: "auto",
   slidesPerGroup: 1,
-  loop: true,
   spaceBetween: 30,
 });
 

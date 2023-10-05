@@ -235,7 +235,6 @@ button {
     animation: fade 0.4s ease-in-out;
   }
 }
-
 .menu__link {
   color: #fff;
   font-size: 16px;
@@ -746,20 +745,20 @@ input[type="checkbox"] {
   line-height: 52px;
   text-transform: uppercase;
   margin-bottom: 20px;
-}
-.contacts-block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 100px;
-  gap: 30px;
+  text-align: center;
+  min-width: 482px;
 }
 .contacts__inner {
   width: auto;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
   justify-content: space-between;
   margin-top: 20px;
+  flex-wrap: wrap;
+  min-height: 108px;
+  background-color: #000;
+  padding: 24px 20px;
+  row-gap: 50px;
+  column-gap: 30px;
 }
 .contacts__inner_item {
   display: flex;
@@ -767,19 +766,20 @@ input[type="checkbox"] {
   gap: 15px;
 }
 .contacts__item_title {
-  font-weight: 600;
+  font-weight: 700;
+
+  color: #fff;
 }
-.phones__item {
-  display: flex;
-  gap: 30px;
-  justify-content: space-between;
-}
+
 .contacts__inner_text {
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
 }
 .contacts__inner_content {
   font-size: 16px;
   font-weight: 600;
+  color: #fff;
 }
 .contacts_network {
   width: 130px;
@@ -791,7 +791,10 @@ input[type="checkbox"] {
   height: 32px;
 }
 .contacts__form {
-  max-width: 580px;
+  max-width: 672px;
+  padding: 40px;
+  height: 590px;
+  border: 1px solid #000;
 }
 .contacts__fb,
 .contacts__fb img {
@@ -800,6 +803,16 @@ input[type="checkbox"] {
 }
 .contacts__map {
   margin-bottom: 100px;
+  max-width: 1087px;
+  width: 100%;
+}
+.contacts-form-map {
+  height: 590px;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 40px;
+  gap: 30px;
+  margin: 100px 0;
 }
 .contacts__button {
   width: 100%;
@@ -816,6 +829,9 @@ input[type="checkbox"] {
   .contacts__form {
     max-width: 550px;
   }
+  .contacts-form-map {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -824,18 +840,27 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 950px) {
-  .contacts-block {
+@media (max-width: 1400px) {
+  .contacts-form-map {
     flex-direction: column;
     width: 90%;
     margin: 60px auto 100px;
+    height: auto;
+    gap: 50px;
+  }
+  .contacts__title {
+    min-width: unset;
   }
   .contacts__form {
-    max-width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
   }
   .contacts__inner {
     width: 100%;
     margin: 0;
+  }
+  .contacts__map {
+    max-width: unset;
   }
 }
 @media (max-width: 463px) {

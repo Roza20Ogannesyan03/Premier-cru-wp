@@ -120,6 +120,7 @@ body.noscroll {
 .inner-btn:hover {
   background-color: #fff;
   color: #000;
+  transition: background-color 0.3s ease-out;
 }
 .inner__block2_text {
   margin-bottom: 48px;
@@ -184,7 +185,7 @@ body.noscroll {
   margin-bottom: 100px;
 }
 .hide_arrow {
-  display: none;
+  display: none !important;
 }
 .limonchello__swiper-button-next,
 .limonchello__swiper-button-prev {
