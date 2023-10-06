@@ -31,12 +31,11 @@
   color: #777e90;
 }
 .title {
-  height: 64px;
-  margin: 60px 0;
+  margin: 40px 0;
   font-family: Century Gothic;
   font-size: 48px;
   font-weight: 700;
-  line-height: 64px;
+  line-height: 150%;
   text-align: left;
 }
 .events__header {

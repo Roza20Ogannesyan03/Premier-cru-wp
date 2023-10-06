@@ -357,6 +357,7 @@ button {
   right: 0;
   height: 27px;
   padding-right: 34px;
+  padding-top: 13px;
 }
 @media (min-width: 1200px) {
   .menu__item-svg-block {
@@ -836,7 +837,11 @@ input[type="checkbox"] {
     margin-bottom: 50px;
   }
 }
-
+@media (max-width: 1150px) {
+  .contacts__inner_item {
+    width: 248px;
+  }
+}
 @media (max-width: 1100px) {
   .contacts__form {
     max-width: 450px;
@@ -869,6 +874,11 @@ input[type="checkbox"] {
   }
   .contacts__map {
     max-width: 100%;
+  }
+}
+@media (max-width: 880px) {
+  .contacts__inner_item {
+    width: 187px;
   }
 }
 @media (max-width: 463px) {

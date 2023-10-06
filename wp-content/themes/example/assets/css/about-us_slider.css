@@ -92,8 +92,8 @@
 }
 
 .slide__sign_img {
-  width: 80px;
-  height: 80px;
+  max-width: 90%;
+  height: 60px;
 }
 
 .about-us__swiper-button-next {

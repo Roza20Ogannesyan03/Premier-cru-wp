@@ -44,11 +44,6 @@ get_header(); ?>
 
 
         <div class="contacts__inner_item">
-            <p class="contacts__inner_text">Адрес</p>
-            <p class="contacts__inner_content">г. Владикавказ, Проспект Мира д.1</p>
-        </div>
-
-        <div class="contacts__inner_item">
             <p class="contacts__inner_text">Наша почта</p>
             <a class="contacts__inner_content" href="mailto:">premier-cru@gmail.com</a>
         </div>
