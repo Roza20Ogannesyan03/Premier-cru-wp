@@ -70,7 +70,7 @@ get_header(); ?>
                 <input class="inputs" type="tel" name="number-contacts" id="number-contacts" placeholder="+7 (___) ___-__-__">
 
 
-                <textarea name="message" id="message" class="inputs message"></textarea>
+                <textarea name="message" id="message" class="inputs message" placeholder="Ваше сообщение"></textarea>
 
                 <label for="select" class="select">
                     <div class="checkbox-checked checked">
