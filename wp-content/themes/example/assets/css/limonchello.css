@@ -340,6 +340,8 @@ body.noscroll {
 
 .map {
   width: 956px;
+  position: relative;
+  height: 396px;
 }
 
 @media (max-width: 1440px) {

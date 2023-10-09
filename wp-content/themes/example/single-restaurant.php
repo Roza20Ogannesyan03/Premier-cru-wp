@@ -24,7 +24,7 @@ get_header(); ?>
                     <a class="rest_white" href="tel:+7 8672 40 36 60"><?php the_field('number'); ?></a>
                 </div>
                 <div class="rest-menu rest-btn">
-                    <a class="rest_white" href=""><?php the_field('posmotret_menyu'); ?></a>
+                    <a class="rest_white" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
                 </div>
                 <div class="rest-btn rest_white inner-btn " id="inner-btn">Подробнее</div>
             </div>
@@ -76,7 +76,7 @@ get_header(); ?>
             <div class="inner">
                 <div class="inner__block1">
                     <div class="inner__block1_links">
-                        <a class="underline" href=""><?php the_field('posmotret_menyu'); ?></a>
+                        <a class="underline" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
                         <a class="underline" href="<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
                         <a class="underline" href=""><?php the_field('3d_tour'); ?></a>
                     </div>
@@ -114,14 +114,10 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="inner__block2">
-                    <div class="map">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af081c23bc31a05c83a58a85795c9eb024a9422b1772eb0bf2640c40b3d9bcf98&amp;width=100%25&amp;height=396&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <div class="map" id="map">
+                        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af081c23bc31a05c83a58a85795c9eb024a9422b1772eb0bf2640c40b3d9bcf98&amp;width=100%25&amp;height=396&amp;lang=ru_RU&amp;scroll=true"></script> -->
                     </div>
                     <div class="inner__block2_chef">
-
-
-
-
                         <div class="about-chef">
 
 
@@ -157,7 +153,16 @@ get_header(); ?>
 
     <div class="popup-page" id="popup-page"></div>
 </main>
+
 <?php get_footer(); ?>
+
+<!-- <script src="https://api-maps.yandex.ru/2.0-stable/?apikey=84112ee6-39c5-4400-b576-01e91a82a877
+&?apikey=84112ee6-39c5-4400-b576-01e91a82a877
+&load=package.standard&lang=ru-RU"></script> -->
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=84112ee6-39c5-4400-b576-01e91a82a877&lang=ru_RU" type="text/javascript">
+</script>
+
 
 <script type="text/javascript">
     lightGallery(document.getElementById('lightgallery'), {
@@ -167,4 +172,25 @@ get_header(); ?>
 
         // ... other settings
     });
+
+    function init() {
+        let map = new ymaps.Map("map", {
+            center: [<? the_field(('shirota')); ?>, <? the_field(('dolgota')); ?>], // ваши данные
+            zoom: 18,
+
+
+        });
+        let placemark = new ymaps.Placemark(
+            [<? the_field(('shirota')); ?>, <? the_field(('dolgota')); ?>], {
+                iconLayout: "default#image",
+                iconImageHref: "<?php echo get_template_directory_uri(); ?>/assets/images/maps.png",
+                iconImageSize: [56, 56],
+                //iconImageOffset: [-25, -50],
+            }
+        );
+        map.controls.remove("searchControl");
+        map.geoObjects.add(placemark);
+    }
+
+    ymaps.ready(init);
 </script>
