@@ -54,13 +54,7 @@ body {
 .pages__link:last-child {
   color: #777e90;
 }
-.all-events__item {
-  max-width: 533px;
-  max-height: 361px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+
 .item__img-container {
   position: relative;
 }
