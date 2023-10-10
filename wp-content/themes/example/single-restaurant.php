@@ -182,6 +182,12 @@ get_header(); ?>
         });
         let placemark = new ymaps.Placemark(
             [<? the_field(('shirota')); ?>, <? the_field(('dolgota')); ?>], {
+                balloonContent: `
+      <div class="balloon">
+        <div class="balloon__address"><?php the_field('address_text'); ?></div>
+      </div>
+    `,
+            }, {
                 iconLayout: "default#image",
                 iconImageHref: "<?php echo get_template_directory_uri(); ?>/assets/images/maps.png",
                 iconImageSize: [56, 56],

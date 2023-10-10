@@ -44,7 +44,7 @@ body {
 .restaurants__row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   column-gap: 30px;
   row-gap: 62px;
