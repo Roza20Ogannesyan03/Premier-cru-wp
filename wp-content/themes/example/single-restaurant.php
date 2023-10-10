@@ -131,8 +131,10 @@ get_header(); ?>
                                 if ($shef) : ?>
                                     <div class="about-chef__name"><?php echo esc_html($shef->post_title); ?></div>
                                 <?php endif; ?>
-                                <?php if ($shef) : ?>
-                                    <p class="about-chef__text"><?php echo wp_strip_all_tags(esc_html($shef->post_content)); ?></p>
+                                <?php if ($shef) :
+                                    $f = esc_html($shef->post_content);
+                                ?>
+                                    <p class="about-chef__text"><?php echo wp_strip_all_tags($f); ?></p>
                                 <?php endif; ?>
                             </div>
 
