@@ -21,7 +21,7 @@ get_header(); ?>
             </div>
             <div class="rest-buttons">
                 <div class="rest-num rest-btn">
-                    <a class="rest_white" href="tel:+7 8672 40 36 60"><?php the_field('number'); ?></a>
+                    <a class="rest_white" href="tel:<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
                 </div>
                 <div class="rest-menu rest-btn">
                     <a class="rest_white" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
