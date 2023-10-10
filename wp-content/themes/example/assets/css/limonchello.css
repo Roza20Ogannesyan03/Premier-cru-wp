@@ -333,6 +333,7 @@ body.noscroll {
 }
 .about-chef__text {
   line-height: 24px;
+  padding-bottom: 30px;
 }
 
 .item__titles {
