@@ -129,10 +129,10 @@ get_header(); ?>
                                 <?php
 
                                 if ($shef) : ?>
-                                    <p class="about-chef__name"><?php echo esc_html($shef->post_title); ?></p>
+                                    <div class="about-chef__name"><?php echo esc_html__($shef->post_title); ?></div>
                                 <?php endif; ?>
                                 <?php if ($shef) : ?>
-                                    <p class="about-chef__text"><?php echo esc_html($shef->post_content); ?></p>
+                                    <p class="about-chef__text"><?php echo esc_html__($shef->post_content); ?></p>
                                 <?php endif; ?>
                             </div>
 
