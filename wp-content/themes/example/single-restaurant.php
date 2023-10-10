@@ -77,9 +77,9 @@ get_header(); ?>
                 <div class="inner__block1">
                     <div class="inner__block1_links">
                         <a class="underline" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
-                        <a class="underline" href="<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
-                        <a class="underline" href=""><?php the_field('3d_tour'); ?></a>
-                    </div>
+                        <a class="underline" href="tel:<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
+                        <a class="underline" href="<?php echo get_template_directory_uri() . get_field('3d_tur_link'); ?>"><?php the_field('3d_tour'); ?></a>
+                    </div>3d_tur_link
                     <div class="inner__block1_about-limochello">
                         <div class="about-limochello__item">
                             <h6 class="about-limochello__item_title"><?php the_field('kuhnya'); ?></h6>

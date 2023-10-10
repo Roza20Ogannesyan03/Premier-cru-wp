@@ -94,6 +94,7 @@
 .slide__sign_img {
   max-width: 90%;
   height: 60px;
+  object-fit: contain;
 }
 
 .about-us__swiper-button-next {

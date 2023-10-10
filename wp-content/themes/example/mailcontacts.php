@@ -72,10 +72,10 @@ if ($_POST) {
     $mail->SMTPDebug = 0;
     $mail->Host = 'ssl://smtp.gmail.com';
     $mail->Port = 465;
-    $mail->Username = 'rozaogannesyan109@gmail.com';
+    $mail->Username = 'tp@abeta.ru';
     $mail->Password = 'vauwqichjdwptkzn';
-    $mail->setFrom('rozaogannesyan109@gmail.com', 'Premier cru');
-    $mail->addAddress('rozaogannesyan109@gmail.com');
+    $mail->setFrom('tp@abeta.ru', 'Premier cru');
+    $mail->addAddress('tp@abeta.ru');
     // $mail->addAddress('tp@abeta.ru');
     $mail->Subject = 'Обратный звонок с сайта ';
     $mail->isHTML(true);
