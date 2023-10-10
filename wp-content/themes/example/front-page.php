@@ -53,7 +53,7 @@ get_header(); ?>
           foreach ($qwe as $row) {
           ?>
 
-            <a href="<?= wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full'); ?>" <?php post_class('slider__swiper-slide'); ?> class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+            <a href="<?= $row['slide_imgg']; ?>" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <img src="<?= $row['slide_imgg']; ?>" alt="" />
             </a>
 
