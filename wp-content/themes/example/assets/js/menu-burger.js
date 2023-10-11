@@ -59,9 +59,30 @@ function openMenu(e) {
   }
 }
 
-
+function delitel(count, sec, start) {
+  for (let i = start; i < 20; i++) {
+    if (count % i != 0) {
+      sec = i;
+      break;
+    }
+  }
+}
 
 function numberAnimation(count, sec) {
+
+  if (count < 400) {
+    delitel(count, sec, 2);
+  }
+  if (count < 1200) {
+    delitel(count, sec, 3);
+  }
+  if (count <= 1500) {
+    delitel(count, sec, 5);
+  }
+  if (count > 1500) {
+    delitel(count, sec, 7);
+  }
+  console.log(sec)
   let numberTop = count.getBoundingClientRect().top;
   let start = +count.innerHTML;
   let end = +count.dataset.max;
@@ -79,8 +100,4 @@ function numberAnimation(count, sec) {
   });
 }
 
-numberAnimation(document.querySelector(".count"), 3);
-// numberAnimation(document.querySelector(".count2002"), 7);
-// numberAnimation(document.querySelector(".count320"), 1);
-// numberAnimation(document.querySelector(".count845"), 2.5);
-
+numberAnimation(document.querySelector(".count"), 1);
