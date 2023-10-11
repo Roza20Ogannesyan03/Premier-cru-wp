@@ -101,6 +101,7 @@ function numberAnimation(count, sec) {
       }, 5);
     }
   });
+  sec = 1
 }
 
 numbers = document.querySelectorAll(".count");
