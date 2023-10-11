@@ -61,7 +61,9 @@ function openMenu(e) {
 
 function delitel(count, sec, start) {
   for (let i = start; i < 20; i++) {
+    console.log(count % i)
     if (count % i == 0) {
+
       sec = i;
       break;
     }
