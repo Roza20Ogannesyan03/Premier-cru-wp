@@ -84,7 +84,7 @@ function numberAnimation(count, sec) {
   let start = +count.innerHTML;
   let end = +count.dataset.max;
   window.addEventListener("scroll", function onScroll() {
-    if (this.window.scrollY > numberTop - this.window.innerHeight / 2) {
+    if (this.window.scrollY > numberTop - this.window.innerHeight) {
       this.removeEventListener("scroll", onScroll);
       let interval = setInterval(function () {
         start += sec;
@@ -97,4 +97,7 @@ function numberAnimation(count, sec) {
   });
 }
 
-numberAnimation(document.querySelector(".count"), 1);
+numbers = document.querySelectorAll(".count");
+numbers.forEach(item => {
+  numberAnimation(item, 1);
+})
