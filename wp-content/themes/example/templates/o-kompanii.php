@@ -8,6 +8,7 @@ get_header(); ?>
         padding: 25px 0;
         line-height: 150%;
         word-wrap: break-word;
+        color: #4c4a4a;
     }
 </style>
 <div class="background-img">
@@ -26,30 +27,32 @@ get_header(); ?>
     <h1 class="title"><?php the_title(); ?></h1>
 </div>
 <div class="container">
-    <div class="about-us-numbers">
+    <div class="wrapper">
+        <div class="about-us-numbers">
 
-        <?php
-        $delay = 0;
-        $qwe = get_field('preimushestvo');
+            <?php
+            $delay = 0;
+            $qwe = get_field('preimushestvo');
 
-        foreach ($qwe as $row) {
-        ?>
-            <div class="about-us__block1 block wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
-                <p class="about-us-numbers_p count" data-max="<?= $row['count']; ?>">0</p>
-                <span></span>
-                <div class="block__text">
-                    <p class="company__title"><?= $row['company_title']; ?></p>
-                    <p class="description">
-                        <?= $row['company_subtitle']; ?>
-                    </p>
+            foreach ($qwe as $row) {
+            ?>
+                <div class="about-us__block1 block wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
+                    <p class="about-us-numbers_p count" data-max="<?= $row['count']; ?>">0</p>
+                    <span></span>
+                    <div class="block__text">
+                        <p class="company__title"><?= $row['company_title']; ?></p>
+                        <p class="description">
+                            <?= $row['company_subtitle']; ?>
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-        <?php
-            $delay += 0.2;
-        }
-        ?>
+            <?php
+                $delay += 0.2;
+            }
+            ?>
 
+        </div>
     </div>
 </div>
 </div>

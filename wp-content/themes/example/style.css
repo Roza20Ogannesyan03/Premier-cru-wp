@@ -953,3 +953,39 @@ input[type="checkbox"] {
   line-height: 24px;
   color: #777e90;
 }
+
+@media (max-width: 1440px) {
+  .about-us-numbers {
+    margin-top: 130px;
+    grid-template-columns: repeat(4, 285px);
+  }
+  .wrapper {
+    padding: 0 20px;
+  }
+  .about-us-numbers {
+    margin-top: 130px;
+    grid-template-columns: repeat(4, 285px);
+  }
+}
+@media (max-width: 1200px) {
+  .about-us-numbers {
+    grid-template-rows: repeat(2, 221px);
+    grid-template-columns: repeat(2, 320px);
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 748px) {
+  .about-us-numbers {
+    grid-template-rows: repeat(4, 221px);
+    grid-template-columns: repeat(1, 260px);
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+  }
+}
