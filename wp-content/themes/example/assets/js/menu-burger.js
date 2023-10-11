@@ -73,20 +73,22 @@ function delitel(count, sec, start) {
 
 function numberAnimation(count, sec) {
 
-  if (count > 400 && count < 1200) {
-    sec = delitel(count, sec, 3);
-  }
-  if (count <= 1500) {
-    sec = delitel(count, sec, 5);
-  }
-  if (count > 1500) {
-    sec = delitel(count, sec, 7);
-  }
-  console.log(count)
+
   console.log(sec)
   let numberTop = count.getBoundingClientRect().top;
   let start = +count.innerHTML;
   let end = +count.dataset.max;
+  console.log(end)
+
+  if (end > 400 && end < 1200) {
+    sec = delitel(end, sec, 3);
+  }
+  if (end <= 1500) {
+    end = delitel(end, sec, 5);
+  }
+  if (end > 1500) {
+    sec = delitel(end, sec, 7);
+  }
   window.addEventListener("scroll", function onScroll() {
     if (this.window.scrollY > numberTop - this.window.innerHeight) {
       this.removeEventListener("scroll", onScroll);
