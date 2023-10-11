@@ -58,3 +58,29 @@ function openMenu(e) {
     e.parentElement.classList.add("open");
   }
 }
+
+
+
+function numberAnimation(count, sec) {
+  let numberTop = count.getBoundingClientRect().top;
+  let start = +count.innerHTML;
+  let end = +count.dataset.max;
+  window.addEventListener("scroll", function onScroll() {
+    if (this.window.scrollY > numberTop - this.window.innerHeight / 2) {
+      this.removeEventListener("scroll", onScroll);
+      let interval = setInterval(function () {
+        start += sec;
+        count.innerHTML = start;
+        if (start == end) {
+          clearInterval(interval);
+        }
+      }, 5);
+    }
+  });
+}
+
+numberAnimation(document.querySelector(".count"), 3);
+// numberAnimation(document.querySelector(".count2002"), 7);
+// numberAnimation(document.querySelector(".count320"), 1);
+// numberAnimation(document.querySelector(".count845"), 2.5);
+

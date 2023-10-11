@@ -26,7 +26,7 @@ get_header(); ?>
     <h1 class="title"><?php the_title(); ?></h1>
 </div>
 <div class="container">
-    <div class="about-us-numbers" id="lightgallery">
+    <div class="about-us-numbers">
 
         <?php
         $delay = 0;
@@ -34,8 +34,8 @@ get_header(); ?>
 
         foreach ($qwe as $row) {
         ?>
-            <div class="about-us__block1 block wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
-                <p class="about-us-numbers_p"><?= $row['count']; ?></p>
+            <div class="about-us__block1 block wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
+                <p class="about-us-numbers_p count" data-max="<?= $row['count']; ?>">0</p>
                 <span></span>
                 <div class="block__text">
                     <p class="company__title"><?= $row['company_title']; ?></p>
@@ -116,13 +116,6 @@ get_header(); ?>
         </svg>
     </div>
 </div>
-<script type="text/javascript">
-    lightGallery(document.getElementById('lightgallery'), {
-        plugins: [lgZoom, lgThumbnail],
-        licenseKey: 'your_license_key',
-        speed: 500,
-        // ... other settings
-    });
-</script>
+
 
 <?php get_footer(); ?>

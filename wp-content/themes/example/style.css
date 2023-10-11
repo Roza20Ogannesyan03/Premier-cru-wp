@@ -912,6 +912,10 @@ input[type="checkbox"] {
   margin-top: 80px;
 }
 
+.about-us-numbers p {
+  padding: 0;
+}
+
 .block {
   display: flex;
   flex-direction: column;

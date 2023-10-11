@@ -28,3 +28,5 @@ const swiper = new Swiper(document.getElementById("rubl"), {
     },
   },
 });
+
+
