@@ -78,7 +78,9 @@ get_header(); ?>
                     <div class="inner__block1_links">
                         <a class="underline" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
                         <a class="underline" href="tel:<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
-                        <a class="underline" href="<?php echo get_template_directory_uri() . get_field('3d_tur_link'); ?>"><?php the_field('3d_tour'); ?></a>
+                        <? if (get_field('3d_tur_link')) { ?>
+                            <a class="underline" href="<?php echo get_home_url(); ?>/v_tours/<?php the_field('3d_tur_link'); ?>/virtualtour.html"><?php the_field('3d_tour'); ?></a>
+                        <? } ?>
                     </div>
                     <div class="inner__block1_about-limochello">
                         <div class="about-limochello__item">
@@ -118,23 +120,27 @@ get_header(); ?>
                         <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af081c23bc31a05c83a58a85795c9eb024a9422b1772eb0bf2640c40b3d9bcf98&amp;width=100%25&amp;height=396&amp;lang=ru_RU&amp;scroll=true"></script> -->
                     </div>
                     <?php
+                    $rest_name = get_the_title();
                     $shef = get_field('shef');
                     if ($shef) {
+                        global $post;
+                        $post = $shef;
+                        setup_postdata($post);
                     ?>
                         <div class="inner__block2_chef">
                             <div class="about-chef">
 
 
-                                <p class="about-chef__lim">Шеф повар ресторана <?php the_title(); ?></p>
+                                <p class="about-chef__lim">Шеф повар ресторана <?php echo $rest_name; ?></p>
                                 <?php
 
                                 if ($shef) : ?>
-                                    <div class="about-chef__name"><?php echo esc_html($shef->post_title); ?></div>
+                                    <div class="about-chef__name"><?php the_title(); ?></div>
                                 <?php endif; ?>
                                 <?php if ($shef) :
                                     $f = esc_html($shef->post_content);
                                 ?>
-                                    <p class="about-chef__text"><?php echo wp_strip_all_tags($f); ?></p>
+                                    <p class="about-chef__text"><?php the_content(); ?></p>
                                 <?php endif; ?>
                             </div>
 
@@ -148,6 +154,9 @@ get_header(); ?>
 
 
                         </div>
+                        <?php
+                        wp_reset_postdata();
+                        ?>
                     <?php } ?>
                 </div>
             </div>

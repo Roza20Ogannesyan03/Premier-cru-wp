@@ -902,3 +902,49 @@ input[type="checkbox"] {
     font-size: 40px;
   }
 }
+
+.about-us-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  grid-auto-rows: 221px;
+  grid-column-gap: 30px;
+  grid-row-gap: 32px;
+  margin-top: 80px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.block__text {
+  width: 256px;
+  height: 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-us-numbers_p {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #23262f;
+}
+
+.about-us-numbers span {
+  width: 256px;
+  border: 1px solid #e1e5ee;
+}
+
+.company__title {
+  line-height: 24px;
+  color: #23262f;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777e90;
+}
