@@ -101,10 +101,11 @@ function numberAnimation(count, sec) {
       }, 5);
     }
   });
-  sec = 1
+
 }
 
 numbers = document.querySelectorAll(".count");
 numbers.forEach(item => {
   numberAnimation(item, 1);
+  sec = 1
 })
