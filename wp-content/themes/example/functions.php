@@ -47,6 +47,12 @@ function add_scripts_and_styles()
         wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
     }
 
+    if (is_page_template('templates/o-kompanii.php')) {
+        wp_enqueue_script('about-us', get_template_directory_uri() . '/assets/js/about-us.js', array(), null, 'footer');
+        wp_enqueue_style('slider1', get_template_directory_uri() . '/assets/css/slider1.css');
+        wp_enqueue_style('about-us', get_template_directory_uri() . '/assets/css/about-us.css');
+        wp_enqueue_style('about-us_slider', get_template_directory_uri() . '/assets/css/about-us_slider.css');
+    }
 
     if (is_post_type_archive('restaurant')) {
         wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
