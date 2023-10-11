@@ -70,9 +70,6 @@ function delitel(count, sec, start) {
 
 function numberAnimation(count, sec) {
 
-  if (count < 400) {
-    delitel(count, sec, 2);
-  }
   if (count < 1200) {
     delitel(count, sec, 3);
   }
