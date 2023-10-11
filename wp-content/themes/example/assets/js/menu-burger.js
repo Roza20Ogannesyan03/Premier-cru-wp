@@ -61,7 +61,7 @@ function openMenu(e) {
 
 function delitel(count, sec, start) {
   for (let i = start; i < 20; i++) {
-    console.log(count % i)
+    console.log(i)
     if (count % i == 0) {
 
       sec = i;
@@ -83,7 +83,7 @@ function numberAnimation(count, sec) {
   if (end > 400 && end < 1200) {
     sec = delitel(end, sec, 3);
   }
-  if (end <= 1500) {
+  if (end > 1200 && end <= 1500) {
     sec = delitel(end, sec, 5);
   }
   if (end > 1500) {
@@ -107,5 +107,4 @@ function numberAnimation(count, sec) {
 numbers = document.querySelectorAll(".count");
 numbers.forEach(item => {
   numberAnimation(item, 1);
-  sec = 1
 })

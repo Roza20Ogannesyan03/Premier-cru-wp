@@ -910,6 +910,7 @@ input[type="checkbox"] {
   grid-column-gap: 30px;
   grid-row-gap: 32px;
   margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 .about-us-numbers p {
