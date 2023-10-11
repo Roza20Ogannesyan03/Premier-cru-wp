@@ -61,7 +61,7 @@ function openMenu(e) {
 
 function delitel(count, sec, start) {
   for (let i = start; i < 20; i++) {
-    if (count % i != 0) {
+    if (count % i == 0) {
       sec = i;
       break;
     }
@@ -70,7 +70,7 @@ function delitel(count, sec, start) {
 
 function numberAnimation(count, sec) {
 
-  if (count < 1200) {
+  if (count > 400 && count < 1200) {
     delitel(count, sec, 3);
   }
   if (count <= 1500) {
