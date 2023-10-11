@@ -84,7 +84,7 @@ function numberAnimation(count, sec) {
     sec = delitel(end, sec, 3);
   }
   if (end <= 1500) {
-    end = delitel(end, sec, 5);
+    sec = delitel(end, sec, 5);
   }
   if (end > 1500) {
     sec = delitel(end, sec, 7);
