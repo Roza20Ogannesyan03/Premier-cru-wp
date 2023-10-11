@@ -68,19 +68,21 @@ function delitel(count, sec, start) {
       break;
     }
   }
+  return sec;
 }
 
 function numberAnimation(count, sec) {
-  console.log(count)
+
   if (count > 400 && count < 1200) {
-    delitel(count, sec, 3);
+    sec = delitel(count, sec, 3);
   }
   if (count <= 1500) {
-    delitel(count, sec, 5);
+    sec = delitel(count, sec, 5);
   }
   if (count > 1500) {
-    delitel(count, sec, 7);
+    sec = delitel(count, sec, 7);
   }
+  console.log(count)
   console.log(sec)
   let numberTop = count.getBoundingClientRect().top;
   let start = +count.innerHTML;
