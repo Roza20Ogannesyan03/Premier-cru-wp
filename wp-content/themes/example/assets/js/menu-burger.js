@@ -71,7 +71,7 @@ function delitel(count, sec, start) {
 }
 
 function numberAnimation(count, sec) {
-
+  console.log(count)
   if (count > 400 && count < 1200) {
     delitel(count, sec, 3);
   }
