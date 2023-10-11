@@ -955,15 +955,10 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 1440px) {
-  .about-us-numbers {
-    margin-top: 130px;
-    grid-template-columns: repeat(4, 285px);
-  }
   .wrapper {
     padding: 0 20px;
   }
   .about-us-numbers {
-    margin-top: 130px;
     grid-template-columns: repeat(4, 285px);
   }
 }
@@ -987,5 +982,6 @@ input[type="checkbox"] {
     grid-template-columns: repeat(1, 260px);
     grid-column-gap: 60px;
     grid-row-gap: 50px;
+    margin-top: 0;
   }
 }

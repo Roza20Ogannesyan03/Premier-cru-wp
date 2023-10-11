@@ -8,7 +8,7 @@ get_header(); ?>
         padding: 25px 0;
         line-height: 150%;
         word-wrap: break-word;
-        color: #4c4a4a;
+        color: #23262f;
     }
 </style>
 <div class="background-img">
@@ -23,10 +23,8 @@ get_header(); ?>
     </ul>
 
 </div>
-<div class="container-small">
-    <h1 class="title"><?php the_title(); ?></h1>
-</div>
 <div class="container">
+    <h1 class="title"><?php the_title(); ?></h1>
     <div class="wrapper">
         <div class="about-us-numbers">
 
@@ -54,9 +52,8 @@ get_header(); ?>
 
         </div>
     </div>
-</div>
-</div>
-<div class="container-small">
+
+
     <?php the_content(); ?>
 </div>
 
