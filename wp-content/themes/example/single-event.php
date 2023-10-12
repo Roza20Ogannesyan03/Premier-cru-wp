@@ -43,7 +43,7 @@ get_header(); ?>
                     </svg>
                 </a>
             </div>
-            <div class="all-events">
+            <div class="all-events all-events_single">
 
                 <?php
                 $args = array(

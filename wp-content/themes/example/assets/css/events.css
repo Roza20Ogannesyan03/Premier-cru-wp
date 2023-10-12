@@ -74,6 +74,12 @@
   column-gap: 30px;
   justify-content: center;
 }
+.all-events_single {
+  margin-bottom: 255px;
+}
+.app-event {
+  margin-top: 100px;
+}
 
 .all-events__item {
   width: 533px;
