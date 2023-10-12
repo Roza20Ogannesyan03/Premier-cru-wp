@@ -310,6 +310,7 @@ body.noscroll {
   height: 100%;
   object-fit: cover;
   border-radius: 100%;
+  object-position: top;
 }
 
 .about-chef {

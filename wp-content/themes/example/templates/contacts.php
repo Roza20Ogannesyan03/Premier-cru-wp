@@ -126,6 +126,7 @@ get_header(); ?>
                 } else {
                     e.querySelector('.response').innerHTML = request.response;
                     e.reset();
+
                 }
 
             }

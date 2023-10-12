@@ -773,6 +773,10 @@ input[type="checkbox"] {
   color: #fff;
 }
 
+.contacts__form .select {
+  line-height: 24px;
+}
+
 .contacts__inner_text {
   font-size: 14px;
   text-transform: uppercase;
@@ -794,10 +798,11 @@ input[type="checkbox"] {
 }
 .contacts__form {
   max-width: 672px;
-  padding: 40px;
-  height: 590px;
+  padding: 40px 40px 44px;
+  height: max-content;
   border: 1px solid #000;
   border-radius: 5px;
+  margin-bottom: 100px;
 }
 .contacts__form .select {
   gap: 18px;
@@ -811,12 +816,11 @@ input[type="checkbox"] {
   width: 100%;
 }
 .contacts-form-map {
-  height: 590px;
   display: flex;
   justify-content: flex-end;
   padding-left: 40px;
   gap: 30px;
-  margin: 100px 0;
+  margin: 100px 0 0;
 }
 .contacts__button {
   width: 100%;
@@ -826,7 +830,7 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 @media (max-width: 1200px) {
