@@ -93,7 +93,7 @@ if ($_POST) {
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
     $mail->SMTPDebug = 0;
-    $mail->Host = 'ssl://smtp.gmail.com';
+    $mail->Host = 'ssl://smtp.mail.ru';
     $mail->Port = 465;
     $mail->Username = 'tp@abeta.ru';
     $mail->Password = 'vauwqichjdwptkzn';
