@@ -58,6 +58,7 @@ get_header(); ?>
 </div>
 
 <div class="swiper" id="kupol">
+    <h2 class="weight-700 company__rest">Наши рестораны</h2>
     <div class="swiper-wrapper">
 
         <?php

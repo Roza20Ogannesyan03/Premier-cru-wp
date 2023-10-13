@@ -910,7 +910,7 @@ input[type="checkbox"] {
 .about-us-numbers {
   display: grid;
   grid-template-columns: repeat(4, 320px);
-  grid-auto-rows: 221px;
+  grid-auto-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 32px;
   margin-top: 80px;
@@ -951,7 +951,9 @@ input[type="checkbox"] {
   line-height: 24px;
   color: #23262f;
 }
-
+.company__rest {
+  margin-bottom: 60px;
+}
 .description {
   font-size: 14px;
   line-height: 24px;
@@ -968,10 +970,8 @@ input[type="checkbox"] {
 }
 @media (max-width: 1200px) {
   .about-us-numbers {
-    grid-template-rows: repeat(2, 221px);
+    grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, 320px);
-    grid-column-gap: 60px;
-    grid-row-gap: 32px;
   }
 
   .wrapper {
@@ -982,9 +982,8 @@ input[type="checkbox"] {
 
 @media (max-width: 748px) {
   .about-us-numbers {
-    grid-template-rows: repeat(4, 221px);
+    grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(1, 260px);
-    grid-column-gap: 60px;
     grid-row-gap: 50px;
     margin-top: 0;
   }
