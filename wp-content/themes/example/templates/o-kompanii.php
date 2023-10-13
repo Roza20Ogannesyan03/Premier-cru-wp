@@ -57,8 +57,11 @@ get_header(); ?>
     <?php the_content(); ?>
 </div>
 <div class="company-rest">
-    <div class="swiper" id="kupol">
+    <div class="container">
         <h2 class="company-rest__title">Наши рестораны</h2>
+    </div>
+    <div class="swiper" id="kupol">
+
         <div class="swiper-wrapper">
 
             <?php
