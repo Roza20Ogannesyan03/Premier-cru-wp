@@ -329,7 +329,7 @@ body.noscroll {
   font-size: 24px;
   line-height: 32px;
   color: #141416;
-  margin: 16px 0 20px;
+  margin: 16px 0 0;
 }
 .about-chef__text {
   line-height: 24px;
