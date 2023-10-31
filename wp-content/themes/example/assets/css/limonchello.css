@@ -389,7 +389,7 @@ body.noscroll {
   }
 }
 
-@media (max-width: 748px) {
+@media (max-width: 890px) {
   .inner__block2_chef {
     flex-direction: column;
     gap: 30px;
