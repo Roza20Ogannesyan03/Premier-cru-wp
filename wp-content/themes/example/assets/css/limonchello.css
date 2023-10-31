@@ -315,7 +315,6 @@ body.noscroll {
 
 .about-chef {
   max-width: 674px;
-  height: 152px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -391,6 +390,16 @@ body.noscroll {
 }
 
 @media (max-width: 748px) {
+  .inner__block2_chef {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .chef-img {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 748px) {
   .limonchello__swiper-button-prev {
     left: 30px;
   }
@@ -408,13 +417,6 @@ body.noscroll {
   }
   .inner__block2_text p {
     font-size: 16px;
-  }
-  .inner__block2_chef {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .chef-img {
-    margin-right: 20px;
   }
 
   .rest-buttons {
