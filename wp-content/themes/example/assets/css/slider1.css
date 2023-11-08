@@ -25,6 +25,9 @@
   object-fit: cover;
 }
 .akcii_tekst {
+  line-height: 30px;
+}
+.zagolovok {
   font-size: 32px;
   line-height: 50px;
   font-weight: 700;
@@ -44,6 +47,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+}
+.slide__img_container {
+  height: 277px;
 }
 .descr {
   display: flex;
@@ -192,8 +198,8 @@
   }
 }
 @media (max-width: 560px) {
-  .slider__swiper-slide {
-    height: 250px !important;
+  .slide__img_container {
+    height: 378px !important;
   }
   .slider-swiper__text {
     margin-bottom: 20px;
@@ -201,13 +207,13 @@
 }
 
 @media (max-width: 450px) {
-  .slider__swiper-slide {
+  .slide__img_container {
     height: 190px !important;
   }
 }
 
 @media (max-width: 400px) {
-  .slider__swiper-slide {
+  .slide__img_container {
     height: 160px !important;
   }
 }

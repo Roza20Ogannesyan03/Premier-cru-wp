@@ -55,10 +55,12 @@ get_header(); ?>
 
             <a href="<?= $row['slide_imgg']; ?>" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <div class="descr">
-                <p class="akcii_tekst"><?= $row['zagolovok']; ?></p>
-                <p><?= $row['akcii_tekst']; ?></p>
+                <p class="zagolovok"><?= $row['zagolovok']; ?></p>
+                <p class="akcii_tekst"><?= $row['akcii_tekst']; ?></p>
               </div>
-              <img src="<?= $row['slide_imgg']; ?>" alt="" />
+              <div class="slide__img_container">
+                <img src="<?= $row['slide_imgg']; ?>" alt="" />
+              </div>
             </a>
 
           <?php
