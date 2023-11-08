@@ -155,7 +155,7 @@ get_header();
                     pagination.replaceWith(paginationResponse);
                     if (pageNext == pages) {
                         loadmoreEvents.remove();
-                        console.log(pageNext);
+                        console.log(pageNext); 
                     } else {
                         pageNext++;
                     }

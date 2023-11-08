@@ -52,7 +52,10 @@ get_header(); ?>
 
           foreach ($qwe as $row) {
           ?>
-
+            <div class="descr">
+              <p class="weight-700"><?= $row['zagolovok']; ?></p>
+              <p><?= $row['akcii_tekst']; ?></p>
+            </div>
             <a href="<?= $row['slide_imgg']; ?>" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <img src="<?= $row['slide_imgg']; ?>" alt="" />
             </a>
@@ -106,7 +109,7 @@ get_header(); ?>
           <a class="swiper-slide about-us__slide" href="<?php the_permalink(); ?>">
             <?php if ($thumbnail_url) : ?>
               <div class="about-us__slide_img" style="background-image: url('<?php echo $thumbnail_url ?>')" <?php post_class('about-us__slide_img'); ?>>
-                <img class="slide__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/mask.png" alt="" />
+                <img class="slide__img" src="" alt="" />
               </div>
             <?php endif; ?>
             <div class="slide__sign">
@@ -225,24 +228,24 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 <script>
-  // let slides = document.querySelectorAll(".slide__img");
-  // let slidesCount = slides.length;
-  // for (let i = 0; i < slidesCount; i++) {
+  let slides = document.querySelectorAll(".slide__img");
+  let slidesCount = slides.length;
+  for (let i = 0; i < slidesCount; i++) {
 
-  //   if (i % 4 === 0) {
-  //     slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask1.svg";
-  //   }
-  //   if (i % 4 === 1) {
-  //     slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask2.svg";
-  //   }
-  //   if (i % 4 === 2) {
-  //     slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask3.svg";
-  //   }
-  //   if (i % 4 === 3) {
-  //     slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask4.svg";
-  //   }
+    if (i % 4 === 0) {
+      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask1.svg";
+    }
+    if (i % 4 === 1) {
+      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask2.svg";
+    }
+    if (i % 4 === 2) {
+      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask3.svg";
+    }
+    if (i % 4 === 3) {
+      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask4.svg";
+    }
 
-  // }
+  }
 </script>
 <script type="text/javascript">
   lightGallery(document.getElementById('lightgallery'), {

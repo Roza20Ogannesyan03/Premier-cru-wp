@@ -25,33 +25,7 @@ get_header(); ?>
 </div>
 <div class="container">
     <h1 class="title"><?php the_title(); ?></h1>
-    <div class="wrapper">
-        <div class="about-us-numbers">
 
-            <?php
-            $delay = 0;
-            $qwe = get_field('preimushestvo');
-
-            foreach ($qwe as $row) {
-            ?>
-                <div class="about-us__block1 block wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
-                    <p class="about-us-numbers_p count" data-max="<?= $row['count']; ?>">0</p>
-                    <span></span>
-                    <div class="block__text">
-                        <p class="company__title"><?= $row['company_title']; ?></p>
-                        <p class="description">
-                            <?= $row['company_subtitle']; ?>
-                        </p>
-                    </div>
-                </div>
-
-            <?php
-                $delay += 0.2;
-            }
-            ?>
-
-        </div>
-    </div>
 
 
     <?php the_content(); ?>

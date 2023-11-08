@@ -309,3 +309,4 @@ if ($_SERVER['REQUEST_URI'] == '/event/page/') {
     header("Location: /event/");
     exit();
 }
+ 
