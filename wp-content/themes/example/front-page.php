@@ -52,11 +52,12 @@ get_header(); ?>
 
           foreach ($qwe as $row) {
           ?>
-            <div class="descr">
-              <p class="weight-700"><?= $row['zagolovok']; ?></p>
-              <p><?= $row['akcii_tekst']; ?></p>
-            </div>
+
             <a href="<?= $row['slide_imgg']; ?>" class="slider__swiper-slide swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+              <div class="descr">
+                <p class="weight-700"><?= $row['zagolovok']; ?></p>
+                <p><?= $row['akcii_tekst']; ?></p>
+              </div>
               <img src="<?= $row['slide_imgg']; ?>" alt="" />
             </a>
 

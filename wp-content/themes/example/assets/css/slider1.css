@@ -6,6 +6,9 @@
   max-height: 277px;
   border-radius: 16px;
   transition: width 2s, height 2s;
+  display: flex !important;
+  flex-direction: column;
+  gap: 30px;
 }
 .act-slide {
   width: 650px !important;
