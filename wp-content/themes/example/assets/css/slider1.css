@@ -3,7 +3,7 @@
 }
 .slider__swiper-slide {
   max-width: 533px !important;
-  max-height: 277px;
+  max-height: 377px;
   border-radius: 16px;
   transition: width 2s, height 2s;
   display: flex !important;
@@ -24,6 +24,12 @@
   border-radius: 16px;
   object-fit: cover;
 }
+.akcii_tekst {
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #23262f;
+}
 
 .sale {
   text-transform: uppercase;
@@ -42,7 +48,7 @@
 .descr {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  max-width: 533px;
   height: 96px;
 }
 .swiper-slide-active .descr {
