@@ -3,7 +3,6 @@
 }
 .slider__swiper-slide {
   max-width: 533px !important;
-  max-height: 377px;
   border-radius: 16px;
   transition: width 2s, height 2s;
   display: flex !important;
@@ -199,7 +198,7 @@
 }
 @media (max-width: 560px) {
   .slide__img_container {
-    height: 378px !important;
+    height: 250px !important;
   }
   .slider-swiper__text {
     margin-bottom: 20px;
@@ -209,6 +208,9 @@
 @media (max-width: 450px) {
   .slide__img_container {
     height: 190px !important;
+  }
+  .zagolovok {
+    font-size: 30px;
   }
 }
 
