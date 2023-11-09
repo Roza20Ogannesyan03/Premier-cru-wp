@@ -57,7 +57,7 @@ get_header(); ?>
                     <a class="swiper-slide about-us__slide" href="<?php the_permalink(); ?>">
                         <?php if ($thumbnail_url) : ?>
                             <div class="about-us__slide_img" style="background-image: url('<?php echo $thumbnail_url ?>')" <?php post_class('about-us__slide_img'); ?>>
-                                <img class="slide__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/mask.png" alt="" />
+                                <img class="slide__img" src="" alt="" />
                             </div>
                         <?php endif; ?>
                         <div class="slide__sign">
@@ -96,5 +96,32 @@ get_header(); ?>
     </div>
 </div>
 
+<script>
+    let slides = document.querySelectorAll(".slide__img");
+    let slidesCount = slides.length;
+    for (let i = 0; i < slidesCount; i++) {
+
+        if (i % 6 === 0) {
+            slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask1.svg";
+        }
+        if (i % 6 === 1) {
+            slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask2.svg";
+        }
+        if (i % 6 === 2) {
+            slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask3.svg";
+        }
+        if (i % 6 === 3) {
+            slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask4.svg";
+        }
+        if (i % 6 === 4) {
+            slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask5.svg";
+        }
+        if (i % 6 === 5) {
+            slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask6.svg";
+        }
+
+
+    }
+</script>
 
 <?php get_footer(); ?>

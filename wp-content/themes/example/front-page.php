@@ -112,7 +112,7 @@ get_header(); ?>
           <a class="swiper-slide about-us__slide" href="<?php the_permalink(); ?>">
             <?php if ($thumbnail_url) : ?>
               <div class="about-us__slide_img" style="background-image: url('<?php echo $thumbnail_url ?>')" <?php post_class('about-us__slide_img'); ?>>
-
+                <img class="slide__img" src="" alt="" />
               </div>
             <?php endif; ?>
             <div class="slide__sign">
@@ -230,7 +230,7 @@ get_header(); ?>
 
 <?php get_footer(); ?>
 
-<!-- <script>
+<script>
   let slides = document.querySelectorAll(".slide__img");
   let slidesCount = slides.length;
   for (let i = 0; i < slidesCount; i++) {
@@ -248,7 +248,7 @@ get_header(); ?>
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask4.svg";
     }
     if (i % 6 === 4) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask5.png";
+      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask5.svg";
     }
     if (i % 6 === 5) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask6.svg";
@@ -256,7 +256,7 @@ get_header(); ?>
 
 
   }
-</script> -->
+</script>
 <script type="text/javascript">
   lightGallery(document.getElementById('lightgallery'), {
     plugins: [lgZoom, lgThumbnail],
