@@ -6,6 +6,5 @@ const swiper1 = new Swiper(document.getElementById("kupol"), {
 
   slidesPerView: "auto",
   slidesPerGroup: 1,
-  loop: true,
   spaceBetween: 44,
 });
