@@ -235,22 +235,22 @@ get_header(); ?>
   let slidesCount = slides.length;
   for (let i = 0; i < slidesCount; i++) {
 
-    if (i % 4 === 0) {
+    if (i % 6 === 0) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask1.svg";
     }
-    if (i % 4 === 1) {
+    if (i % 6 === 1) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask2.svg";
     }
-    if (i % 4 === 2) {
+    if (i % 6 === 2) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask3.svg";
     }
-    if (i % 4 === 3) {
+    if (i % 6 === 3) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask4.svg";
     }
-    if (i % 4 === 4) {
+    if (i % 6 === 4) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask5.svg";
     }
-    if (i % 4 === 5) {
+    if (i % 6 === 5) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask6.svg";
     }
 
