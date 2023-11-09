@@ -50,7 +50,7 @@ get_header();
 
                                 <a class="item__titles"><?php the_title(); ?></a>
 
-                                <h5 class="item__subtitle"><?php the_excerpt(); ?></h5>
+                                <div class="item__subtitle"><?php the_excerpt(); ?></div>
                             </a>
                         </div>
 
@@ -155,7 +155,7 @@ get_header();
                     pagination.replaceWith(paginationResponse);
                     if (pageNext == pages) {
                         loadmoreEvents.remove();
-                        console.log(pageNext); 
+                        console.log(pageNext);
                     } else {
                         pageNext++;
                     }

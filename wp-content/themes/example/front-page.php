@@ -189,8 +189,8 @@ get_header(); ?>
                   <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
                 </a>
               </div>
-              <h4> <a class=" item__titles" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-              <h5><a class="item__subtitle" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></h5>
+              <div> <a class=" item__titles" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+              <div><a class="item__subtitle" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></div>
 
             </div>
         <?php
