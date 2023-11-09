@@ -134,7 +134,8 @@
 .item__titles {
   font-weight: 700;
   color: #23262f;
-  margin-top: 6px;
+  margin-top: 10px;
+  display: block;
 }
 .item__subtitle {
   font-size: 14px;

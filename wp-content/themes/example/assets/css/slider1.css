@@ -27,8 +27,7 @@
   line-height: 30px;
 }
 .zagolovok {
-  font-size: 32px;
-  line-height: 50px;
+  font-size: 18px;
   font-weight: 700;
   color: #23262f;
 }
@@ -58,26 +57,12 @@
 .swiper-slide-active .descr {
   display: flex;
 }
-.pagination-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 324px;
-  height: 64px;
-  gap: 60px;
-}
-
-.swiper-pagination {
-  width: 94px;
-  height: 24px;
-}
 
 .arrows {
   display: flex;
-  width: 168px;
   height: 64px;
-  gap: 50px;
-  left: 162px;
+  gap: 30px;
+  align-items: center;
 }
 
 .arrow {
@@ -87,8 +72,8 @@
 
 .slider__swiper-button-prev,
 .slider__swiper-button-next {
-  width: 59px !important;
-  height: 59px !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50px;
   border: 1px solid black;
   display: flex !important;
@@ -96,6 +81,19 @@
   justify-content: center;
   z-index: 2;
   cursor: pointer;
+}
+
+.slider__swiper-button-prev:hover path,
+.slider__swiper-button-next:hover path {
+  fill: #fff;
+  stroke: #fff;
+  transition: fill 0.35s ease-out;
+  transition: stroke 0.35s ease-out;
+}
+.slider__swiper-button-prev:hover,
+.slider__swiper-button-next:hover {
+  background-color: #23262f;
+  transition: background-color 0.35s ease-out;
 }
 .swiper-wrapper {
   align-items: center;

@@ -15,12 +15,12 @@ get_header(); ?>
 
           <h2 class="sale weight-700">Акции</h2>
           <div class="pagination-container">
-            <div class="swiper-pagination"></div>
+
 
             <div class="arrows">
               <!-- If we need navigation buttons -->
               <div class="slider__swiper-button-prev">
-                <svg data-v-9e081b70="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+                <svg data-v-9e081b70="" width="20" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
                   <g data-v-9e081b70="" clip-path="url(#clip0_1836_1028)">
                     <path data-v-9e081b70="" d="M16 17.6416L8.5799 10L16 2.35836L13.7101 -1.00095e-07L4 10L13.7101 20L16 17.6416Z" fill="#23262F"></path>
                   </g>
@@ -34,7 +34,7 @@ get_header(); ?>
               <!--xkxoHstw
                 abetadev-->
               <div class="slider__swiper-button-next">
-                <svg data-v-9e081b70="" width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+                <svg data-v-9e081b70="" width="12" height="14" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
                   <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
                 </svg>
               </div>
@@ -253,12 +253,7 @@ get_header(); ?>
     if (i % 4 === 5) {
       slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask6.svg";
     }
-    if (i % 4 === 6) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask7.svg";
-    }
-    if (i % 4 === 7) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask8.svg";
-    }
+
 
   }
 </script>
