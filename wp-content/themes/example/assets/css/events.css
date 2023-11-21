@@ -276,6 +276,16 @@
   .events-500 .events__header {
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 40px;
+    gap: 30px;
+    column-gap: 60px;
+  }
+}
+
+@media (max-width: 405px) {
+  .events-500 .events__header {
+    align-items: center;
+    flex-wrap: wrap;
     padding: 0 30px;
     gap: 30px;
     column-gap: 60px;
