@@ -4,6 +4,7 @@ const swiper = new Swiper(document.getElementById("rubl"), {
     prevEl: ".slider__swiper-button-prev",
   },
   centeredSlides: false,
+  cssMode: true,
   slidesPerView: "auto",
   spaceBetween: 30,
   // pagination: {
@@ -33,6 +34,8 @@ const swiper = new Swiper(document.getElementById("rubl"), {
 
 const swiperEvent = new Swiper(document.getElementById("event"), {
   centeredSlides: false,
+  cssMode: true,
   slidesPerView: "auto",
+  loop: false,
   spaceBetween: 30,
 });
