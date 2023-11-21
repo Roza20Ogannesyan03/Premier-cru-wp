@@ -153,7 +153,7 @@ get_header(); ?>
 
 
   <div class="container-large">
-    <div class="events events-min-1740">
+    <div class="events events-min-500">
       <div class="events__header">
         <h2 class="events__title">События</h2>
         <span class="events__line"></span>
@@ -205,7 +205,7 @@ get_header(); ?>
 
 
 
-    <div class="events events-1740 swiper" id="event">
+    <div class="events events-500 swiper" id="event">
       <div class="events__header">
         <h2 class="events__title">События</h2>
         <span class="events__line"></span>
@@ -216,6 +216,28 @@ get_header(); ?>
             <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#777e90"></path>
           </svg>
         </a>
+        <div class="arrows">
+          <!-- If we need navigation buttons -->
+          <div class="events__swiper-button-prev">
+            <svg data-v-9e081b70="" width="20" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+              <g data-v-9e081b70="" clip-path="url(#clip0_1836_1028)">
+                <path data-v-9e081b70="" d="M16 17.6416L8.5799 10L16 2.35836L13.7101 -1.00095e-07L4 10L13.7101 20L16 17.6416Z" fill="#23262F"></path>
+              </g>
+              <defs data-v-9e081b70="">
+                <clipPath data-v-9e081b70="" id="clip0_1836_1028">
+                  <rect data-v-9e081b70="" width="20" height="20" fill="white" transform="translate(20) rotate(90)"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <!--xkxoHstw
+                abetadev-->
+          <div class="events__swiper-button-next">
+            <svg data-v-9e081b70="" width="12" height="14" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+              <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
+            </svg>
+          </div>
+        </div>
       </div>
       <div class="all-events swiper-wrapper">
 

@@ -33,6 +33,10 @@ const swiper = new Swiper(document.getElementById("rubl"), {
 
 
 const swiperEvent = new Swiper(document.getElementById("event"), {
+  navigation: {
+    nextEl: ".events__swiper-button-next",
+    prevEl: ".events__swiper-button-prev",
+  },
   centeredSlides: false,
   cssMode: true,
   slidesPerView: "auto",

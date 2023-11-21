@@ -1,7 +1,46 @@
 .events {
   margin: 100px auto;
 }
-.events-1740 {
+.events-500 {
+  display: none;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.events__swiper-button-prev,
+.events__swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px;
+  border: 1px solid black;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.events__swiper-button-prev:hover path,
+.events__swiper-button-next:hover path {
+  fill: #fff;
+  stroke: #fff;
+  transition: fill 0.35s ease-out;
+  transition: stroke 0.35s ease-out;
+}
+.events__swiper-button-prev:hover,
+.events__swiper-button-next:hover {
+  background-color: #23262f;
+  transition: background-color 0.35s ease-out;
+}
+.swiper-wrapper {
+  align-items: center;
+  transition: opacity 0.35s ease-out;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
   display: none;
 }
 .events__title {
@@ -86,7 +125,6 @@
 
 .all-events__item {
   max-width: 533px !important;
-  max-height: 361px;
   display: flex !important;
   flex-direction: column;
   gap: 6px;
@@ -146,18 +184,24 @@
   line-height: 24px;
 }
 @media (max-width: 1739px) {
-  .events-1740 .all-events {
+  .events__row,
+  .restaurants__row {
+    column-gap: 100px !important;
+  }
+}
+@media (max-width: 465px) {
+  .events-500 .all-events {
     display: flex;
     flex-wrap: unset;
     row-gap: unset;
     column-gap: unset;
     justify-content: unset;
   }
-  .events-min-1740 {
+  .events-min-500 {
     display: none;
   }
 
-  .events-1740 {
+  .events-500 {
     display: block;
   }
 
@@ -188,7 +232,7 @@
   .events__header {
     justify-content: center;
   }
-  .events-1740 .all-events {
+  .events-500 .all-events {
     flex-direction: unset;
     align-items: unset;
     justify-content: unset;
@@ -225,14 +269,20 @@
   }
 }
 
-@media (max-width: 480px) {
-  .events__header {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 0 40px;
-    gap: 30px;
+@media (max-width: 465px) {
+  .events__title {
+    margin: 0;
   }
+  .events-500 .events__header {
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    gap: 30px;
+    column-gap: 60px;
+  }
+}
 
+@media (max-width: 480px) {
   .item__img-container {
     max-width: 533px;
     height: 250px;
