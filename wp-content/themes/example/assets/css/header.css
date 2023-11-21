@@ -202,10 +202,6 @@
     width: 148px;
     gap: 30px;
   }
-  .pagination-container {
-    gap: 40px;
-    width: 304px;
-  }
   .number {
     color: #fff;
     width: auto;

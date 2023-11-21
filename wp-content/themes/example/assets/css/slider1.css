@@ -34,6 +34,7 @@
 
 .sale {
   text-transform: uppercase;
+  color: #d81010;
 }
 
 .slider-swiper {
@@ -112,39 +113,17 @@
   color: #777e90;
 }
 
-@media (max-width: 1440px) {
-  .slider-swiper__text {
-    justify-content: space-between;
-  }
-  .pagination-container {
-    width: 250px;
-  }
-}
-
 @media (max-width: 1200px) {
   .weight-700 {
     font-size: 36px;
   }
-  .pagination-container {
-    width: 324px;
-  }
 }
 
 @media (max-width: 1024px) {
-  .slider-swiper__text {
-    position: unset;
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
   #rubl {
     display: flex;
     flex-direction: column;
     gap: 30px;
-  }
-  .pagination-container {
-    width: 324px;
-    margin-top: 30px;
   }
   .weight-700 {
     font-size: 46px;
@@ -169,29 +148,6 @@
     line-height: 48px;
     font-size: 36px;
     margin-bottom: 10px;
-  }
-  .arrows {
-    width: 130px;
-    gap: 20px;
-  }
-  .slider__swiper-button-next,
-  .slider__swiper-button-prev {
-    width: 48px !important;
-    height: 48px !important;
-  }
-}
-@media (max-width: 748px) {
-  .pagination-container {
-    width: 240px;
-  }
-}
-
-@media (max-width: 480px) {
-  .pagination-container {
-    gap: 0;
-  }
-  .slider-swiper__text {
-    margin: 0;
   }
 }
 @media (max-width: 560px) {

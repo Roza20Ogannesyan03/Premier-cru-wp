@@ -6,27 +6,33 @@ const swiper = new Swiper(document.getElementById("rubl"), {
   centeredSlides: false,
   slidesPerView: "auto",
   spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-    formatFractionCurrent: function (number, index) {
-      return ("0" + number).slice(-2);
-    },
-    formatFractionTotal: function (number, tot) {
-      return ("0" + number).slice(-2);
-    },
-    renderFraction: function (currentClass, totalClass) {
-      return (
-        '<span class = "' +
-        currentClass +
-        ' "></span>' +
-        "/" +
-        '<span class = "' +
-        totalClass +
-        ' "></span>'
-      );
-    },
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   type: "fraction",
+  //   formatFractionCurrent: function (number, index) {
+  //     return ("0" + number).slice(-2);
+  //   },
+  //   formatFractionTotal: function (number, tot) {
+  //     return ("0" + number).slice(-2);
+  //   },
+  //   renderFraction: function (currentClass, totalClass) {
+  //     return (
+  //       '<span class = "' +
+  //       currentClass +
+  //       ' "></span>' +
+  //       "/" +
+  //       '<span class = "' +
+  //       totalClass +
+  //       ' "></span>'
+  //     );
+  //   },
+  // },
 });
 
 
+
+const swiperEvent = new Swiper(document.getElementById("event"), {
+  centeredSlides: false,
+  slidesPerView: "auto",
+  spaceBetween: 30,
+});

@@ -153,7 +153,7 @@ get_header(); ?>
 
 
   <div class="container-large">
-    <div class="events">
+    <div class="events events-min-1740">
       <div class="events__header">
         <h2 class="events__title">События</h2>
         <span class="events__line"></span>
@@ -202,7 +202,60 @@ get_header(); ?>
 
       </div>
     </div>
+
+
+
+    <div class="events events-1740 swiper" id="event">
+      <div class="events__header">
+        <h2 class="events__title">События</h2>
+        <span class="events__line"></span>
+        <a class="events__button" href="/event/">
+
+          <p class="button__text">Все события</p>
+          <svg data-v-9e081b70="" width="12" height="12" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+            <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#777e90"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="all-events swiper-wrapper">
+
+        <?php
+        $args = array(
+          'post_type' => 'event',
+          'posts_per_page'    => 6
+        );
+        $delay = 0;
+        $query = new WP_Query($args);
+        if (($query->have_posts())) {
+          while ($query->have_posts()) {
+            $query->the_post();
+        ?>
+            <div class="all-events__item randomly swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+              <div class="item__img-container">
+                <a href="<?php the_permalink(); ?>">
+                  <div class="img-container"> <svg data-v-9e081b70="" width="12" height="15" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+                      <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
+                    </svg></div>
+                </a>
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
+                </a>
+              </div>
+              <div> <a class=" item__titles" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+              <div><a class="item__subtitle" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></div>
+
+            </div>
+        <?php
+            $delay += 0.1;
+          }
+        }
+        wp_reset_postdata();
+        ?>
+
+      </div>
+    </div>
   </div>
+
   <div class="app">
     <div class="container">
       <div class="app__wrapper">
@@ -235,25 +288,7 @@ get_header(); ?>
   let slidesCount = slides.length;
   for (let i = 0; i < slidesCount; i++) {
 
-    if (i % 6 === 0) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask1.svg";
-    }
-    if (i % 6 === 1) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask2.svg";
-    }
-    if (i % 6 === 2) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask3.svg";
-    }
-    if (i % 6 === 3) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask4.svg";
-    }
-    if (i % 6 === 4) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask5.svg";
-    }
-    if (i % 6 === 5) {
-      slides[i].src = "<?php echo get_template_directory_uri(); ?>/assets/images/mask6.svg";
-    }
-
+    slides[i].src = `<?php echo get_template_directory_uri(); ?>/assets/images/mask${i % 6 + 1}.svg`;
 
   }
 </script>
