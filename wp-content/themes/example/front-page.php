@@ -79,7 +79,7 @@ get_header(); ?>
     <div class="about-us">
       <div class="about-us__text1  wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">
 
-        <p class="weight-700 about-us__title">Ресторанная компания «Премьер КРЮ»</p>
+        <h1 class="weight-700 about-us__title">Ресторанная компания «Премьер КРЮ»</h1>
         <p class="font-24">
           Надеемся, что наша работа облегчит Вам непростую задачу найти
           самое лучшее!
