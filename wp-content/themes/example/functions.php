@@ -72,7 +72,8 @@ function add_scripts_and_styles()
 
     if (is_singular('restaurant')) {
         wp_enqueue_style('limonchello', get_template_directory_uri() . '/assets/css/limonchello.css');
-        //wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
+        wp_enqueue_script('limonchello', get_template_directory_uri() . '/assets/js/limonchello.js', array(), null, 'footer');
+        // wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
 
     }
 
