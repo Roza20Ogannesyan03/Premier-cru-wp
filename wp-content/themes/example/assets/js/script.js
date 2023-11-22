@@ -5,6 +5,7 @@ const swiper = new Swiper(document.getElementById("rubl"), {
   },
   centeredSlides: false,
   slidesPerView: "auto",
+  speed: 5000,
   spaceBetween: 30,
   // pagination: {
   //   el: ".swiper-pagination",
