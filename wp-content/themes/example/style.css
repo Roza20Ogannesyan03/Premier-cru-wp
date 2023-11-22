@@ -1030,10 +1030,7 @@ button {
   background-color: #23262f;
   transition: background-color 0.35s ease-out;
 }
-.slider-swiper .swiper-wrapper {
-  align-items: center;
-  transition: opacity 0.35s ease-out;
-}
+
 .slider-swiper .swiper-button-prev::after,
 .slider-swiper .swiper-button-next::after {
   display: none;
