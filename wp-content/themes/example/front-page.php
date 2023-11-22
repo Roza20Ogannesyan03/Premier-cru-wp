@@ -153,7 +153,7 @@ get_header(); ?>
 
 
 
-  <div class="container-large">
+  <div class="container-large ">
     <div class="events events-main">
       <div class="events__header">
         <h2 class="events__title">События</h2>
@@ -204,77 +204,78 @@ get_header(); ?>
       </div>
     </div>
 
+    <div class="ev-cont-500">
 
+      <div class="events events-500 swiper" id="event">
+        <div class="events__header">
+          <h2 class="events__title">События</h2>
+          <span class="events__line"></span>
+          <a class="events__button" href="/event/">
 
-    <div class="events events-500 swiper" id="event">
-      <div class="events__header">
-        <h2 class="events__title">События</h2>
-        <span class="events__line"></span>
-        <a class="events__button" href="/event/">
-
-          <p class="button__text">Все события</p>
-          <svg data-v-9e081b70="" width="12" height="12" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
-            <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#777e90"></path>
-          </svg>
-        </a>
-        <div class="arrows">
-          <!-- If we need navigation buttons -->
-          <div class="events__swiper-button-prev">
-            <svg data-v-9e081b70="" width="20" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
-              <g data-v-9e081b70="" clip-path="url(#clip0_1836_1028)">
-                <path data-v-9e081b70="" d="M16 17.6416L8.5799 10L16 2.35836L13.7101 -1.00095e-07L4 10L13.7101 20L16 17.6416Z" fill="#23262F"></path>
-              </g>
-              <defs data-v-9e081b70="">
-                <clipPath data-v-9e081b70="" id="clip0_1836_1028">
-                  <rect data-v-9e081b70="" width="20" height="20" fill="white" transform="translate(20) rotate(90)"></rect>
-                </clipPath>
-              </defs>
+            <p class="button__text">Все события</p>
+            <svg data-v-9e081b70="" width="12" height="12" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+              <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#777e90"></path>
             </svg>
-          </div>
-          <!--xkxoHstw
+          </a>
+          <div class="arrows">
+            <!-- If we need navigation buttons -->
+            <div class="events__swiper-button-prev">
+              <svg data-v-9e081b70="" width="20" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+                <g data-v-9e081b70="" clip-path="url(#clip0_1836_1028)">
+                  <path data-v-9e081b70="" d="M16 17.6416L8.5799 10L16 2.35836L13.7101 -1.00095e-07L4 10L13.7101 20L16 17.6416Z" fill="#23262F"></path>
+                </g>
+                <defs data-v-9e081b70="">
+                  <clipPath data-v-9e081b70="" id="clip0_1836_1028">
+                    <rect data-v-9e081b70="" width="20" height="20" fill="white" transform="translate(20) rotate(90)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <!--xkxoHstw
                 abetadev-->
-          <div class="events__swiper-button-next">
-            <svg data-v-9e081b70="" width="12" height="14" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
-              <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
-            </svg>
+            <div class="events__swiper-button-next">
+              <svg data-v-9e081b70="" width="12" height="14" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+                <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="all-events swiper-wrapper">
+        <div class="all-events swiper-wrapper">
 
-        <?php
-        $args = array(
-          'post_type' => 'event',
-          'posts_per_page'    => 6
-        );
-        $delay = 0;
-        $query = new WP_Query($args);
-        if (($query->have_posts())) {
-          while ($query->have_posts()) {
-            $query->the_post();
-        ?>
-            <div class="all-events__item swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
-              <div class="item__img-container">
-                <a href="<?php the_permalink(); ?>">
-                  <div class="img-container"> <svg data-v-9e081b70="" width="12" height="15" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
-                      <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
-                    </svg></div>
-                </a>
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
-                </a>
+          <?php
+          $args = array(
+            'post_type' => 'event',
+            'posts_per_page'    => 6
+          );
+          $delay = 0;
+          $query = new WP_Query($args);
+          if (($query->have_posts())) {
+            while ($query->have_posts()) {
+              $query->the_post();
+          ?>
+              <div class="all-events__item swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+                <div class="item__img-container">
+                  <a href="<?php the_permalink(); ?>">
+                    <div class="img-container"> <svg data-v-9e081b70="" width="12" height="15" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
+                        <path data-v-9e081b70="" d="M2.10374e-07 2.35836L7.4201 10L2.81232e-08 17.6416L2.28991 20L12 10L2.28991 2.73069e-08L2.10374e-07 2.35836Z" fill="#23262F"></path>
+                      </svg></div>
+                  </a>
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "item__img-container_img")); ?>
+                  </a>
+                </div>
+                <div> <a class=" item__titles" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                <div><a class="item__subtitle" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></div>
+
               </div>
-              <div> <a class=" item__titles" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-              <div><a class="item__subtitle" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></div>
-
-            </div>
-        <?php
-            $delay += 0.1;
+          <?php
+              $delay += 0.1;
+            }
           }
-        }
-        wp_reset_postdata();
-        ?>
+          wp_reset_postdata();
+          ?>
 
+        </div>
       </div>
     </div>
   </div>

@@ -1295,6 +1295,9 @@ button {
   }
 }
 @media (max-width: 465px) {
+  .events-500 {
+    display: block;
+  }
   .events-500 .all-events {
     display: flex;
     flex-wrap: unset;
@@ -1305,14 +1308,16 @@ button {
   .events-main {
     display: none;
   }
-
   .events-500 {
-    display: block;
+    margin-bottom: 0;
   }
 
   .events__row,
   .restaurants__row {
     column-gap: 100px !important;
+  }
+  .ev-cont-500 .events {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1270px) {
@@ -1487,7 +1492,8 @@ button {
   height: auto;
   max-width: 910px;
 }
-.events {
+
+.events-single.events {
   margin-bottom: 200px;
 }
 .events-single .events__line {
