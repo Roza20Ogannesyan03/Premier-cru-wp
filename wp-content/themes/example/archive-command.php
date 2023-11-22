@@ -20,7 +20,7 @@ get_header(); ?>
       'paged' => $paged,
       'meta_key' => 'num',
       'orderby'  => 'meta_value',
-      'order' => 'DESC',
+      'order' => 'ASC',
 
     ];
     $post_query = new WP_Query($args);
