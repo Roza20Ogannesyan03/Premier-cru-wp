@@ -1,4 +1,4 @@
-const swiper1 = new Swiper(document.getElementById("limonchello"), {
+const swiperlim = new Swiper(document.getElementById("limonchello"), {
   navigation: {
     nextEl: ".limonchello__swiper-button-next",
     prevEl: ".limonchello__swiper-button-prev",

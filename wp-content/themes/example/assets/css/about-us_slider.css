@@ -81,10 +81,11 @@
   background-color: #fff;
   position: absolute;
   z-index: 3;
-  left: 30px;
+  left: 50%;
   bottom: 30px;
-  width: 100px;
-  height: 108px;
+  transform: translate(-50%, 0);
+  width: 150px;
+  height: 158px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +93,7 @@
 
 .slide__sign_img {
   max-width: 90%;
-  height: 60px;
+  height: 80px;
   object-fit: contain;
 }
 

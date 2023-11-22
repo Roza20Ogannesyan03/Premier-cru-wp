@@ -29,65 +29,66 @@ function add_scripts_and_styles()
     wp_enqueue_script('lightgallery', get_template_directory_uri() . '/assets/js/lightgallery.umd.js', array(), null, 'footer');
     wp_enqueue_script('lgthumbnail', get_template_directory_uri() . '/assets/js/lg-thumbnail.umd.js', array(), null, 'footer');
     wp_enqueue_script('lgzoom', get_template_directory_uri() . '/assets/js/lg-zoom.umd.js', array(), null, 'footer');
+    wp_enqueue_script('about-us', get_template_directory_uri() . '/assets/js/about-us.js', array(), null, 'footer');
+
 
     wp_enqueue_style('lightgallerycss', get_template_directory_uri() . '/assets/css/lightgallery.css');
     wp_enqueue_style('lgzoomcss', get_template_directory_uri() . '/assets/css/lg-zoom.css');
     wp_enqueue_style('lgthumbnailcss', get_template_directory_uri() . '/assets/css/lg-thumbnail.css');
 
     wp_enqueue_style('style',  get_stylesheet_uri());
-    wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css');
-    wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
-    wp_enqueue_style('app', get_template_directory_uri() . '/assets/css/app.css');
-    wp_enqueue_style('footer', get_template_directory_uri() . '/assets/css/footer.css');
     wp_enqueue_style('animation', get_template_directory_uri() . '/assets/css/animate.css');
     wp_enqueue_script('anim', get_template_directory_uri() . '/assets/js/wow.min.js', array(), null, 'footer');
 
-    if (is_page_template('templates/personal.php')) {
-        wp_enqueue_style('personal', get_template_directory_uri() . '/assets/css/personal.css');
-        wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
-    }
 
-    if (is_page_template('templates/o-kompanii.php')) {
-        wp_enqueue_script('about-us', get_template_directory_uri() . '/assets/js/about-us.js', array(), null, 'footer');
-        wp_enqueue_style('slider1', get_template_directory_uri() . '/assets/css/slider1.css');
-        wp_enqueue_style('about-us', get_template_directory_uri() . '/assets/css/about-us.css');
-        wp_enqueue_style('about-us_slider', get_template_directory_uri() . '/assets/css/about-us_slider.css');
-    }
+    // wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css');
+    // wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
+    // wp_enqueue_style('app', get_template_directory_uri() . '/assets/css/app.css');
+    // wp_enqueue_style('footer', get_template_directory_uri() . '/assets/css/footer.css');
 
-    if (is_post_type_archive('restaurant')) {
-        wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
-        wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
-    }
 
-    if (is_post_type_archive('event')) {
-        wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
-        wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
-    }
 
-    if (is_post_type_archive('command')) {
-        wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
-        wp_enqueue_style('staff', get_template_directory_uri() . '/assets/css/staff.css');
-    }
+    // if (is_page_template('templates/o-kompanii.php')) {
+    //     wp_enqueue_script('about-us', get_template_directory_uri() . '/assets/js/about-us.js', array(), null, 'footer');
+    //     wp_enqueue_style('slider1', get_template_directory_uri() . '/assets/css/slider1.css');
+    //     wp_enqueue_style('about-us', get_template_directory_uri() . '/assets/css/about-us.css');
+    //     wp_enqueue_style('about-us_slider', get_template_directory_uri() . '/assets/css/about-us_slider.css');
+    // }
+
+    // if (is_post_type_archive('restaurant')) {
+    //     wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
+    //     wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
+    // }
+
+    // if (is_post_type_archive('event')) {
+    //     wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
+    //     wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css');
+    // }
+
+    // if (is_post_type_archive('command')) {
+    //     wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
+    //     wp_enqueue_style('staff', get_template_directory_uri() . '/assets/css/staff.css');
+    // }
 
     if (is_singular('restaurant')) {
         wp_enqueue_style('limonchello', get_template_directory_uri() . '/assets/css/limonchello.css');
-        wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
-        wp_enqueue_script('limonchello', get_template_directory_uri() . '/assets/js/limonchello.js', array(), null, 'footer');
+        //wp_enqueue_style('restaurant', get_template_directory_uri() . '/assets/css/restaurant.css');
+
     }
 
 
-    if (is_front_page('front-page')) {
+    // if (is_front_page('front-page')) {
 
-        wp_enqueue_script('about-us', get_template_directory_uri() . '/assets/js/about-us.js', array(), null, 'footer');
-        wp_enqueue_style('slider1', get_template_directory_uri() . '/assets/css/slider1.css');
-        wp_enqueue_style('about-us', get_template_directory_uri() . '/assets/css/about-us.css');
-        wp_enqueue_style('about-us_slider', get_template_directory_uri() . '/assets/css/about-us_slider.css');
-    }
+    //     wp_enqueue_script('about-us', get_template_directory_uri() . '/assets/js/about-us.js', array(), null, 'footer');
+    //     wp_enqueue_style('slider1', get_template_directory_uri() . '/assets/css/slider1.css');
+    //     wp_enqueue_style('about-us', get_template_directory_uri() . '/assets/css/about-us.css');
+    //     wp_enqueue_style('about-us_slider', get_template_directory_uri() . '/assets/css/about-us_slider.css');
+    // }
 
-    if (is_singular('event')) {
-        wp_enqueue_style('discount', get_template_directory_uri() . '/assets/css/discount.css');
-        wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css', array('restaurant'));
-    }
+    // if (is_singular('event')) {
+    //     wp_enqueue_style('discount', get_template_directory_uri() . '/assets/css/discount.css');
+    //     wp_enqueue_style('events', get_template_directory_uri() . '/assets/css/events.css', array('restaurant'));
+    // }
 
     wp_enqueue_script('burger', get_template_directory_uri() . '/assets/js/menu-burger.js', array(), null, 'footer');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', array(), null, 'footer');
@@ -309,4 +310,3 @@ if ($_SERVER['REQUEST_URI'] == '/event/page/') {
     header("Location: /event/");
     exit();
 }
- 

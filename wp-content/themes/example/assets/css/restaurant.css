@@ -40,6 +40,10 @@ body {
   row-gap: 50px;
 }
 
+.all-events__item_rest {
+  width: 533px;
+}
+
 .events__row,
 .restaurants__row {
   display: flex;

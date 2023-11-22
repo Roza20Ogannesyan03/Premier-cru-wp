@@ -31,7 +31,7 @@ get_header(); ?>
                     $post_query->post;
                 ?>
 
-                    <div class="all-events__item">
+                    <div class="all-events__item all-events__item_rest">
                         <a href="<?php the_permalink(); ?>">
                             <div class="item__img-container scale">
 

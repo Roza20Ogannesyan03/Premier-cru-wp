@@ -79,7 +79,7 @@ get_header(); ?>
     <div class="about-us">
       <div class="about-us__text1  wow animated fadeInUp" data-wow-offset="200" data-wow-delay="0s">
 
-        <p class="weight-700">Управляющая компания «Премьер КРЮ»</p>
+        <p class="weight-700 about-us__title">Ресторанная компания «Премьер КРЮ»</p>
         <p class="font-24">
           Надеемся, что наша работа облегчит Вам непростую задачу найти
           самое лучшее!
@@ -153,7 +153,7 @@ get_header(); ?>
 
 
   <div class="container-large">
-    <div class="events events-min-500">
+    <div class="events events-main">
       <div class="events__header">
         <h2 class="events__title">События</h2>
         <span class="events__line"></span>
@@ -178,7 +178,7 @@ get_header(); ?>
           while ($query->have_posts()) {
             $query->the_post();
         ?>
-            <div class="all-events__item randomly wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+            <div class="all-events__item  wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <div class="item__img-container">
                 <a href="<?php the_permalink(); ?>">
                   <div class="img-container"> <svg data-v-9e081b70="" width="12" height="15" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">
@@ -252,7 +252,7 @@ get_header(); ?>
           while ($query->have_posts()) {
             $query->the_post();
         ?>
-            <div class="all-events__item randomly swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
+            <div class="all-events__item swiper-slide wow animated fadeInUp" data-wow-offset="200" data-wow-delay="<?php echo $delay; ?>s">
               <div class="item__img-container">
                 <a href="<?php the_permalink(); ?>">
                   <div class="img-container"> <svg data-v-9e081b70="" width="12" height="15" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stocks__button__icon">

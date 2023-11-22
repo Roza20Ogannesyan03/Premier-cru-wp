@@ -12,10 +12,7 @@
 }
 
 .about-us__title {
-  height: 12px;
-  font-weight: 700;
-  line-height: 12px;
-  color: #777e90;
+  line-height: 150%;
 }
 
 .font-24 {
@@ -55,12 +52,6 @@
   }
 
   .about-us__title {
-    text-align: center;
-  }
-
-  .about-us__info {
-    width: auto;
-    height: auto;
     text-align: center;
   }
 

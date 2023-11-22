@@ -117,7 +117,7 @@
                         <div class="number"><a class="number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a></div>
                     </div>
                     <div>
-                        <p class="contacts__text">Служба качества</p>
+                        <div class="contacts__text">Служба качества</div>
                     </div>
                 </div>
             </div>

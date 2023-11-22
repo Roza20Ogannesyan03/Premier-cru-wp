@@ -31,7 +31,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="container-small">
-        <div class="events">
+        <div class="events events-single">
             <div class="events__header">
                 <h2 class="events__title">другие события</h2>
                 <span class="events__line"></span>
