@@ -289,12 +289,12 @@ get_header(); ?>
             Получите скидку до <?php the_field('skidka', 'option'); ?> по программе лояльности, только в
             мобильном приложении Premier CRU!
           </div>
-          <a href="<?php the_field('link_appstore', 'option'); ?>" class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
+          <a href="<?php the_field('link_appstore', 'option'); ?>" target="_blank" class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
           </a>
 
-          <a href="<?php the_field('link_googleplay', 'option'); ?>" class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s"></a>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
+          <a href="<?php the_field('link_googleplay', 'option'); ?>" target="_blank" class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
           </a>
 
         </div>

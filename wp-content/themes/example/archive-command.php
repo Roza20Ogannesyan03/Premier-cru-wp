@@ -18,6 +18,9 @@ get_header(); ?>
       'post_type' => 'command',
       'posts_per_page' => -1,
       'paged' => $paged,
+      'meta_key' => $_GET['num'],
+      'order' => $_GET['DESC'],
+
     ];
     $post_query = new WP_Query($args);
     if ($post_query->have_posts()) {

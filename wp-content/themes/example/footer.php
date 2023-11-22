@@ -62,9 +62,9 @@
           <div class="footer__contacts">
             <div class="footer__number"><a class="footer__number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">Служба качества +<?php the_field('number', 'option'); ?></a></div>
             <div class="soc-net">
-              <a href="<?php the_field('link_instagram', 'option'); ?>"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="" /></a>
-              <a href="<?php the_field('link_facebook', 'option'); ?>"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="" /></a>
-              <a href="<?php the_field('link_vk', 'option'); ?>"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/vk.png" alt="" /></a>
+              <a href="<?php the_field('link_instagram', 'option'); ?>" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="" /></a>
+              <a href="<?php the_field('link_facebook', 'option'); ?>" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="" /></a>
+              <a href="<?php the_field('link_vk', 'option'); ?>" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/vk.png" alt="" /></a>
             </div>
           </div>
         </div>
@@ -78,16 +78,16 @@
             <a href="/politika/">
               <p class="white block2__font-1024">Политика конфиденциальности</p>
             </a>
-            <a href="https://abeta.ru/">
+            <a href="https://abeta.ru/" target="_blank">
               <p class="white block2__font-1024">Разработка сайта - ABETA</p>
             </a>
           </div>
           <div class="footer__contacts-1024">
             <div class="footer__number"><a class="footer__number" href="tel:+<?php the_field('link_appstore', 'option'); ?>">Служба качества <?php the_field('number', 'option'); ?></a></div>
             <div class="soc-net">
-              <a href="<?php the_field('link_instagram', 'option'); ?>"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="" /></a>
-              <a href="<?php the_field('link_facebook', 'option'); ?>"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="" /></a>
-              <a href="<?php the_field('link_vk', 'option'); ?>"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/vk.png" alt="" /></a>
+              <a href="<?php the_field('link_instagram', 'option'); ?>" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="" /></a>
+              <a href="<?php the_field('link_facebook', 'option'); ?>" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="" /></a>
+              <a href="<?php the_field('link_vk', 'option'); ?>" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/vk.png" alt="" /></a>
             </div>
           </div>
         </div>
