@@ -19,6 +19,7 @@ get_header(); ?>
       'posts_per_page' => -1,
       'paged' => $paged,
       'meta_key' => 'num',
+      'orderby'  => 'meta_value',
       'order' => 'DESC',
 
     ];
