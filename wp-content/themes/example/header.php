@@ -147,10 +147,9 @@
                                                                 echo 'rest_white';
                                                             } ?> " href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a></div>
                 </div>
-                <div>
-                    <p class="contacts__text <?php if (is_singular('restaurant')) {
-                                                    echo 'rest_white';
-                                                } ?> ">Служба качества</p>
+                <div class="contacts__text <?php if (is_singular('restaurant')) {
+                                                echo 'rest_white';
+                                            } ?> ">Служба качества
                 </div>
             </div>
 

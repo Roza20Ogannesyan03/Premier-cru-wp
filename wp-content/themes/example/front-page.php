@@ -112,12 +112,13 @@ get_header(); ?>
           <a class="swiper-slide about-us__slide" href="<?php the_permalink(); ?>">
             <?php if ($thumbnail_url) : ?>
               <div class="about-us__slide_img" style="background-image: url('<?php echo $thumbnail_url ?>')" <?php post_class('about-us__slide_img'); ?>>
+                <div class="slide__sign">
+                  <img class="slide__sign_img" src="<?= get_field('sign_img'); ?>" alt="" />
+                </div>
                 <img class="slide__img" src="" alt="" />
               </div>
             <?php endif; ?>
-            <div class="slide__sign">
-              <img class="slide__sign_img" src="<?= get_field('sign_img'); ?>" alt="" />
-            </div>
+
           </a>
 
       <?php
