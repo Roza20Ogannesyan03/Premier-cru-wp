@@ -18,13 +18,9 @@ get_header(); ?>
       'post_type' => 'command',
       'posts_per_page' => -1,
       'paged' => $paged,
-      'meta_query' => array( // пешем условия в meta_query
-        array(
-          'key' => 'num', // название произвольного поля
-          'value' => (int)$_POST['num'], // переданное значение произвольного поля
-          'type' => 'numeric'
-        )
-      )
+      'meta_key' => 'num',
+      'order' => 'DESC',
+
     ];
     $post_query = new WP_Query($args);
     if ($post_query->have_posts()) {
