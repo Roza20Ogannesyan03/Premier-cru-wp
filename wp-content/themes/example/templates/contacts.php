@@ -19,27 +19,27 @@ get_header(); ?>
     <div class="contacts__inner">
         <div class="contacts__inner_item">
             <p class="contacts__inner_text">Отдел маркетинга:</p>
-            <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+            <a class="contacts__inner_content" href="tel:+7 (8672) 405178">+7 (8672) 405178</a>
         </div>
 
         <div class="contacts__inner_item">
             <p class="contacts__inner_text">Отдел кадров:</p>
-            <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+            <a class="contacts__inner_content" href="tel:+7 (8672) 405179">+7 (8672) 405179</a>
         </div>
 
         <div class="contacts__inner_item">
             <p class="contacts__inner_text">Отдел закупок:</p>
-            <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+            <a class="contacts__inner_content" href="tel:+7 (8672) 402780">+7 (8672) 402780</a>
         </div>
 
         <div class="contacts__inner_item">
             <p class="contacts__inner_text">Финансовый отдел:</p>
-            <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+            <a class="contacts__inner_content" href="tel:+7 (8672) 405180">+7 (8672) 405180</a>
         </div>
 
         <div class="contacts__inner_item">
             <p class="contacts__inner_text">Юридический отдел:</p>
-            <a class="contacts__inner_content" href="tel:+<?php the_field('link_appstore', 'option'); ?>">+<?php the_field('number', 'option'); ?></a>
+            <a class="contacts__inner_content" href="tel:+7 (8672) 402780">+7 (8672) 402780</a>
         </div>
 
 
