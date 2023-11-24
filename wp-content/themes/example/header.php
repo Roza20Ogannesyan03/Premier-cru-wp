@@ -97,8 +97,8 @@
                 <ul class="navigation header__nav_popup">
                     <?php
                     $args = array(
-                        'menu' => 'top',
-                        'theme_location' => 'top',
+                        'menu' => 'modal',
+                        'theme_location' => 'modal',
                         'container' => false,
                         'walker' => new main_service_mobile_menu_Walker,
                         'items_wrap' => '%3$s'
