@@ -9,11 +9,11 @@ hamb.addEventListener("click", hambHandler);
 function hambHandler(e) {
   popup.classList.toggle("open");
   hamb.classList.toggle("active");
-  if (hamb.classList.contains("active")) {
-    bar.forEach((item) => (item.style.background = "white"));
-  } else {
-    bar.forEach((item) => (item.style.background = "#23262f"));
-  }
+  // if (hamb.classList.contains("active")) {
+  //   bar.forEach((item) => (item.style.background = "white"));
+  // } else {
+  //   bar.forEach((item) => (item.style.background = "#23262f"));
+  // }
 
   body.classList.toggle("noscroll");
   renderPopup();
@@ -59,52 +59,52 @@ function openMenu(e) {
   }
 }
 
-function delitel(count, sec, start) {
-  for (let i = start; i < 20; i++) {
-    console.log(i)
-    if (count % i == 0) {
+// function delitel(count, sec, start) {
+//   for (let i = start; i < 20; i++) {
+//     console.log(i)
+//     if (count % i == 0) {
 
-      sec = i;
-      break;
-    }
-  }
-  return sec;
-}
+//       sec = i;
+//       break;
+//     }
+//   }
+//   return sec;
+// }
 
-function numberAnimation(count, sec) {
+// function numberAnimation(count, sec) {
 
 
-  console.log(sec)
-  let numberTop = count.getBoundingClientRect().top;
-  let start = +count.innerHTML;
-  let end = +count.dataset.max;
-  console.log(end)
+//   console.log(sec)
+//   let numberTop = count.getBoundingClientRect().top;
+//   let start = +count.innerHTML;
+//   let end = +count.dataset.max;
+//   console.log(end)
 
-  if (end > 400 && end < 1200) {
-    sec = delitel(end, sec, 3);
-  }
-  if (end > 1200 && end <= 1500) {
-    sec = delitel(end, sec, 5);
-  }
-  if (end > 1500) {
-    sec = delitel(end, sec, 7);
-  }
-  window.addEventListener("scroll", function onScroll() {
-    if (this.window.scrollY > numberTop - this.window.innerHeight) {
-      this.removeEventListener("scroll", onScroll);
-      let interval = setInterval(function () {
-        start += sec;
-        count.innerHTML = start;
-        if (start == end) {
-          clearInterval(interval);
-        }
-      }, 5);
-    }
-  });
+//   if (end > 400 && end < 1200) {
+//     sec = delitel(end, sec, 3);
+//   }
+//   if (end > 1200 && end <= 1500) {
+//     sec = delitel(end, sec, 5);
+//   }
+//   if (end > 1500) {
+//     sec = delitel(end, sec, 7);
+//   }
+//   window.addEventListener("scroll", function onScroll() {
+//     if (this.window.scrollY > numberTop - this.window.innerHeight) {
+//       this.removeEventListener("scroll", onScroll);
+//       let interval = setInterval(function () {
+//         start += sec;
+//         count.innerHTML = start;
+//         if (start == end) {
+//           clearInterval(interval);
+//         }
+//       }, 5);
+//     }
+//   });
 
-}
+// }
 
-numbers = document.querySelectorAll(".count");
-numbers.forEach(item => {
-  numberAnimation(item, 1);
-})
+// numbers = document.querySelectorAll(".count");
+// numbers.forEach(item => {
+//   numberAnimation(item, 1);
+// })

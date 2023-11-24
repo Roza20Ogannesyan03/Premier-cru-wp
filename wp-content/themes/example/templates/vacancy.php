@@ -155,8 +155,8 @@ Template Name: Вакансии
 
         <div class="sout">
             <h1 class="sout__title">РЕЗУЛЬТАТЫ СОУТ</h1>
-            <a class="sout__link" href="<?php echo get_template_directory_uri(); ?>/assets/perechen_vac.pdf">Перечень мероприятий</a>
-            <a class="sout__link" href="<?php echo get_template_directory_uri(); ?>/assets/vedomost.pdf">Сводная ведомость результатов проведения специальной оценки условий труда</a>
+            <a class="sout__link" href="<?php echo get_template_directory_uri(); ?>/assets/perechen_vac.pdf" target="_blank">Перечень мероприятий</a>
+            <a class="sout__link" href="<?php echo get_template_directory_uri(); ?>/assets/vedomost.pdf" target="_blank">Сводная ведомость результатов проведения специальной оценки условий труда</a>
         </div>
     </div>
     <div class="app">
@@ -169,14 +169,14 @@ Template Name: Вакансии
                         мобильном приложении Premier CRU!
                     </div>
                     <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
-                        <a href="<?php the_field('link_appstore', 'option'); ?>">
+                        <a href="<?php the_field('link_appstore', 'option'); ?>" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
                         </a>
                     </button>
 
                     <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
-                        <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
+                        <a href="<?php the_field('link_googleplay', 'option'); ?>" target="_blank">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
                         </a>
                     </button>
                 </div>

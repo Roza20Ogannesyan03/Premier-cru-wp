@@ -246,7 +246,7 @@ button {
   display: none;
 }*/
 .header__nav_popup a {
-  color: white;
+  color: #000;
 }
 
 .delivery-button {
@@ -342,7 +342,7 @@ button {
     width: auto;
   }
   .header__nav_popup .menu__link {
-    color: #fff;
+    color: #000;
     font-size: 22px;
     line-height: 26px;
   }
@@ -351,7 +351,7 @@ button {
     width: 170px;
   }
   .header__nav_popup .menu__sub {
-    display: none;
+    display: flex;
     flex-wrap: nowrap;
     padding: 0;
     margin-top: 20px;
@@ -359,18 +359,18 @@ button {
   }
 
   .header__nav_popup .menu__sub-link {
-    color: #fff;
+    color: #000;
   }
 
   .popup .delivery-button__popup {
     display: block;
-    background-color: #000;
-    border-color: #fff;
-    color: #fff;
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
     font-size: 24px;
     width: 150px;
     height: 50px;
-    padding: 14px;
+    padding: 5px 14px;
   }
   .header__contacts {
     width: auto;
@@ -441,7 +441,7 @@ button {
     margin: 5px auto;
   }
   .bar.active {
-    color: #fff;
+    color: #000;
   }
 
   .popup {
@@ -450,7 +450,7 @@ button {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #fff;
     z-index: 100;
     display: flex;
     transition: 0.3s;
@@ -480,7 +480,7 @@ button {
   }
 
   .hamb__field.active .bar {
-    color: #fff;
+    color: #000;
   }
   body.noscroll {
     overflow: hidden;
@@ -575,12 +575,6 @@ button {
 .menu__item.open .menu__item-svg-block {
   background-color: transparent;
 }
-.menu__item.open .menu__item-svg {
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  fill: #fff;
-}
 
 .menu__item-svg {
   height: 15px;
@@ -595,7 +589,13 @@ button {
   transition: transform 0.35s ease-out, fill 0.35s ease-out,
     -webkit-transform 0.35s ease-out;
 }
-
+.menu__item.open .menu__item-svg {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  fill: #fff;
+  display: none;
+}
 .menu__sub {
   list-style-type: none;
   padding: 0;

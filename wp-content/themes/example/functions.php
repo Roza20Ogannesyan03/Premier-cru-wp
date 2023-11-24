@@ -98,6 +98,7 @@ function add_scripts_and_styles()
 function add_menu()
 {
     register_nav_menu('top', 'Меню в шапке сайта');
+    register_nav_menu('modal', 'Меню в выпадающем меню');
     register_nav_menu('bottom', 'Меню в подвале сайта');
 }
 

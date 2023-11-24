@@ -70,14 +70,14 @@ get_header(); ?>
                         мобильном приложении Premier CRU!
                     </div>
                     <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".4s">
-                        <a href="<?php the_field('link_appstore', 'option'); ?>">
+                        <a href="<?php the_field('link_appstore', 'option'); ?>" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-store.svg" alt="" />
                         </a>
                     </button>
 
                     <button class="download wow animated fadeInUp" data-wow-offset="200" data-wow-delay=".5s">
-                        <a href="<?php the_field('link_googleplay', 'option'); ?>"></a>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
+                        <a href="<?php the_field('link_googleplay', 'option'); ?>" target="_blank">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/google-play.svg" alt="" />
                         </a>
                     </button>
                 </div>

@@ -155,15 +155,9 @@
 
             <div class="menu__burger-icon">
                 <div class="hamb__field" id="hamb">
-                    <span class="bar <?php if (is_singular('restaurant')) {
-                                            echo 'rest_white-bgc';
-                                        } ?> "></span>
-                    <span class="bar <?php if (is_singular('restaurant')) {
-                                            echo 'rest_white-bgc';
-                                        } ?> "></span>
-                    <span class="bar <?php if (is_singular('restaurant')) {
-                                            echo 'rest_white-bgc';
-                                        } ?> "></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
         </div>

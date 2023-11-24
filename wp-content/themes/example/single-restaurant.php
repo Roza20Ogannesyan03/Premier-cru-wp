@@ -24,7 +24,7 @@ get_header(); ?>
                     <a class="rest_white" href="tel:<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
                 </div>
                 <div class="rest-menu rest-btn">
-                    <a class="rest_white" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
+                    <a class="rest_white" href="<?php the_field('menyu'); ?>" target="_blank"><?php the_field('posmotret_menyu'); ?></a>
                 </div>
                 <div class="rest-btn rest_white inner-btn " id="inner-btn">Подробнее</div>
             </div>
@@ -76,10 +76,10 @@ get_header(); ?>
             <div class="inner">
                 <div class="inner__block1">
                     <div class="inner__block1_links">
-                        <a class="underline" href="<?php the_field('menyu'); ?>"><?php the_field('posmotret_menyu'); ?></a>
+                        <a class="underline" href="<?php the_field('menyu'); ?>" target="_blank"><?php the_field('posmotret_menyu'); ?></a>
                         <a class="underline" href="tel:<?php the_field('number'); ?>"><?php the_field('number'); ?></a>
                         <? if (get_field('3d_tur_link')) { ?>
-                            <a class="underline" href="<?php echo get_home_url(); ?>/v_tours/<?php the_field('3d_tur_link'); ?>/virtualtour.html"><?php the_field('3d_tour'); ?></a>
+                            <a class="underline" href="<?php echo get_home_url(); ?>/v_tours/<?php the_field('3d_tur_link'); ?>/virtualtour.html" target="_blank"><?php the_field('3d_tour'); ?></a>
                         <? } ?>
                     </div>
                     <div class="inner__block1_about-limochello">
