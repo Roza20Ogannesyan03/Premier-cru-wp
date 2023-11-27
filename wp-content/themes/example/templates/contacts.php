@@ -52,38 +52,37 @@ get_header(); ?>
     </div>
 
 </div>
-<div class="wwww">
-    <div class="contacts-form-map">
-        <div class="contacts__form">
-            <form action="<?php echo get_template_directory_uri(); ?>/mailcontacts.php" method="post" onsubmit="return submitForm(this)">
+<div class="contacts-form-map">
+    <div class="contacts__form">
+        <form action="<?php echo get_template_directory_uri(); ?>/mailcontacts.php" method="post" onsubmit="return submitForm(this)">
 
-                <h1 class="contacts__title">Форма обратной связи</h1>
+            <h1 class="contacts__title">Форма обратной связи</h1>
 
-                <input class="inputs" type="text" name="name-contacts" id="name-contacts" placeholder="Ваше имя">
-
-
-                <input class="inputs" type="tel" name="number-contacts" id="number-contacts" placeholder="+7 (___) ___-__-__">
+            <input class="inputs" type="text" name="name-contacts" id="name-contacts" placeholder="Ваше имя">
 
 
-                <textarea name="message" id="message" class="inputs message" placeholder="Ваше сообщение"></textarea>
+            <input class="inputs" type="tel" name="number-contacts" id="number-contacts" placeholder="+7 (___) ___-__-__">
 
-                <label for="select" class="select">
-                    <div class="checkbox-checked checked">
-                        <input type="checkbox" name="select" id="select" class="checkbox" onclick="validate()" checked>
-                        <div class="galochka"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/check_active.png" alt=""></div>
-                    </div>
-                    Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                </label>
-                <button class="contacts__button">Отправить</button>
-                <div class="response"></div>
-            </form>
-        </div>
 
-        <div class="contacts__map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9da30f81ed1ac3e78dc4f71d025a4e7b4774d360f5c8d75d6ff6673d82573fca&amp;width=100%25&amp;height=590&amp;lang=ru_RU&amp;scroll=true"></script>
-        </div>
+            <textarea name="message" id="message" class="inputs message" placeholder="Ваше сообщение"></textarea>
+
+            <label for="select" class="select">
+                <div class="checkbox-checked checked">
+                    <input type="checkbox" name="select" id="select" class="checkbox" onclick="validate()" checked>
+                    <div class="galochka"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/check_active.png" alt=""></div>
+                </div>
+                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+            </label>
+            <button class="contacts__button">Отправить</button>
+            <div class="response"></div>
+        </form>
+    </div>
+
+    <div class="contacts__map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9da30f81ed1ac3e78dc4f71d025a4e7b4774d360f5c8d75d6ff6673d82573fca&amp;width=100%25&amp;height=590&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdxIR4pAAAAAADiYQOf2KEJ4pwj_d4gedjdD4GN"></script>
 
 <script>
     const checked = document.querySelector('.checkbox-checked');

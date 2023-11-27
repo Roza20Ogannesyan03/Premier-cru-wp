@@ -188,7 +188,7 @@ Template Name: Вакансии
 
     <?php get_footer(); ?>
 </div>
-
+<script src="https://www.google.com/recaptcha/api.js?render=6LdxIR4pAAAAAADiYQOf2KEJ4pwj_d4gedjdD4GN"></script>
 <script>
     const fileText = document.querySelector('.dropZoneOverlay__text');
     const fileIcon = document.querySelector('.rezumeIcon');
